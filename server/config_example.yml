@@ -6,9 +6,9 @@ ice_servers:
   # auth_secret:
   #   username: test_user
   #   secret: test_secret
-# tls:
-#   cert: config/cert.pem
-#   key: config/key.pem
+tls:
+  cert: config/cert.pem
+  key: config/key.pem
 store:
   type: memory
   # type: redis
