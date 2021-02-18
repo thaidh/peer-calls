@@ -1,0 +1,4883 @@
+2021-02-18T16:26:50.379359+07:00 [           main] Using config: {BaseURL: BindHost: BindPort:3000 ICEServers:[{URLs:[stun:stun.l.google.com:19302] AuthType: AuthSecret:{Username: Secret:}}] TLS:{Cert: Key:} Store:{Type:memory Redis:{Host: Port:0 Prefix:}} Network:{Type:sfu SFU:{Interfaces:[] Protocols:[] TCPBindAddr: TCPListenPort:0 JitterBuffer:false UDP:{PortMin:9000 PortMax:9010}}} Prometheus:{AccessToken:mytoken}}
+2021-02-18T16:26:50.379423+07:00 [ adapterfactory] Using MemoryAdapter
+2021-02-18T16:26:50.379799+07:00 [            mux] Using network type sfu
+2021-02-18T16:26:50.379821+07:00 [webrtctransport] Set epheremal UDP port range to 9000-9010
+2021-02-18T16:26:50.380030+07:00 [           main] Listening on: [::]:3000
+2021-02-18T16:26:52.559883+07:00 [            wss] [NiGy94hkf2DHs3dKOuiNu2] New websocket connection - room: r1
+2021-02-18T16:26:55.425281+07:00 [       renderer] Rendering template: index.html
+2021-02-18T16:26:55.437438+07:00 [            wss] [NiGy94hkf2DHs3dKOuiNu2] adapter.Remove room: r1
+2021-02-18T16:26:55.437494+07:00 [            wss] [NiGy94hkf2DHs3dKOuiNu2] wss.rooms.Exit room: r1
+2021-02-18T16:26:55.437517+07:00 [            wss] [NiGy94hkf2DHs3dKOuiNu2] Closing websocket connection - room: r1
+2021-02-18T16:26:58.675453+07:00 [       renderer] Rendering template: call.html
+2021-02-18T16:26:58.868567+07:00 [            wss] [Inrz9icu9QFD78qchN77i3] New websocket connection - room: r1
+2021-02-18T16:26:59.907465+07:00 [            sfu] [Inrz9icu9QFD78qchN77i3] Initiator: __SERVER__
+2021-02-18T16:26:59.925948+07:00 [      signaller] [Inrz9icu9QFD78qchN77i3] NewSignaller: Initiator pre-add video transceiver
+2021-02-18T16:26:59.925990+07:00 [      signaller] [Inrz9icu9QFD78qchN77i3] NewSignaller: Initiator pre-add audio transceiver
+2021-02-18T16:26:59.926005+07:00 [      signaller] [Inrz9icu9QFD78qchN77i3] NewSignaller: Initiator calling Negotiate()
+2021-02-18T16:26:59.926016+07:00 [     negotiator] [Inrz9icu9QFD78qchN77i3] Negotiate
+2021-02-18T16:26:59.926028+07:00 [     negotiator] [Inrz9icu9QFD78qchN77i3] Negotiate: start
+2021-02-18T16:26:59.926039+07:00 [     negotiator] [Inrz9icu9QFD78qchN77i3] negotiate: creating offer
+2021-02-18T16:26:59.926896+07:00 [ pion:ice:trace] Set selected candidate pair: <nil>
+2021-02-18T16:26:59.927025+07:00 [            sdp] [Inrz9icu9QFD78qchN77i3] Local signal.type: offer, signal.sdp: v=0
+o=- 4272555820334414741 1613640419 IN IP4 0.0.0.0
+s=-
+t=0 0
+a=fingerprint:sha-256 8E:2B:1D:A9:8C:EA:89:69:EF:45:E2:A4:33:39:3A:19:0B:15:34:08:E9:5F:47:6F:3F:36:A7:CA:55:B5:88:84
+a=group:BUNDLE 0 1 2
+m=video 9 UDP/TLS/RTP/SAVPF 96
+c=IN IP4 0.0.0.0
+a=setup:actpass
+a=mid:0
+a=ice-ufrag:KClaCUwmdbjtIHBf
+a=ice-pwd:tdgjIJUttWUwaqayRNfrtZvzjOBGcTMG
+a=rtcp-mux
+a=rtcp-rsize
+a=rtpmap:96 VP8/90000
+a=rtcp-fb:96 goog-remb 
+a=rtcp-fb:96 nack pli
+a=recvonly
+m=audio 9 UDP/TLS/RTP/SAVPF 111
+c=IN IP4 0.0.0.0
+a=setup:actpass
+a=mid:1
+a=ice-ufrag:KClaCUwmdbjtIHBf
+a=ice-pwd:tdgjIJUttWUwaqayRNfrtZvzjOBGcTMG
+a=rtcp-mux
+a=rtcp-rsize
+a=rtpmap:111 opus/48000/2
+a=fmtp:111 minptime=10;useinbandfec=1
+a=recvonly
+m=application 9 DTLS/SCTP 5000
+c=IN IP4 0.0.0.0
+a=setup:actpass
+a=mid:2
+a=sendrecv
+a=sctpmap:5000 webrtc-datachannel 1024
+a=ice-ufrag:KClaCUwmdbjtIHBf
+a=ice-pwd:tdgjIJUttWUwaqayRNfrtZvzjOBGcTMG
+
+2021-02-18T16:26:59.927070+07:00 [      signaller] [Inrz9icu9QFD78qchN77i3] handle local offer setting local desc
+2021-02-18T16:26:59.927130+07:00 [   pion:pc:info] signaling state changed to have-local-offer
+2021-02-18T16:26:59.927186+07:00 [memorytracksmanager] [Inrz9icu9QFD78qchN77i3] MemoryTrackManager.Add peer to room: r1
+2021-02-18T16:26:59.927211+07:00 [     negotiator] [Inrz9icu9QFD78qchN77i3] Signaling state change: have-local-offer
+2021-02-18T16:26:59.927395+07:00 [      signaller] [Inrz9icu9QFD78qchN77i3] Got ice candidate (waiting)
+2021-02-18T16:26:59.927437+07:00 [      signaller] [Inrz9icu9QFD78qchN77i3] Got ice candidate (processing...)
+2021-02-18T16:26:59.927466+07:00 [      signaller] [Inrz9icu9QFD78qchN77i3] Got ice candidate from server peer: {__SERVER__ {{candidate:foundation 1 udp 2130706431 172.25.84.124 9001 typ host %!s(*string=<nil>) %!s(*uint16=0xc000038540) }}}
+2021-02-18T16:26:59.927567+07:00 [      signaller] [Inrz9icu9QFD78qchN77i3] Got ice candidate (waiting)
+2021-02-18T16:26:59.927583+07:00 [      signaller] [Inrz9icu9QFD78qchN77i3] Got ice candidate (processing...)
+2021-02-18T16:26:59.927601+07:00 [      signaller] [Inrz9icu9QFD78qchN77i3] Got ice candidate from server peer: {__SERVER__ {{candidate:foundation 1 udp 2130706431 172.17.0.1 9008 typ host %!s(*string=<nil>) %!s(*uint16=0xc00003854a) }}}
+2021-02-18T16:26:59.966193+07:00 [  pion:ice:warn] could not get server reflexive address udp6 stun:stun.l.google.com:19302: write udp6 [::]:9010->[2404:6800:4003:c04::7f]:19302: sendto: network is unreachable
+
+2021-02-18T16:27:00.003086+07:00 [            sdp] [Inrz9icu9QFD78qchN77i3] Remote signal.type: answer, signal.sdp: v=0
+o=- 8177614781066156948 2 IN IP4 127.0.0.1
+s=-
+t=0 0
+a=group:BUNDLE 0 1 2
+a=msid-semantic: WMS
+m=video 9 UDP/TLS/RTP/SAVPF 96
+c=IN IP4 0.0.0.0
+a=rtcp:9 IN IP4 0.0.0.0
+a=ice-ufrag:BM2X
+a=ice-pwd:Vuhxchh+x99a/8vCJ+zvTF5P
+a=ice-options:trickle
+a=fingerprint:sha-256 93:2B:9C:F2:AD:0D:53:9B:4A:12:05:F9:00:94:7F:9F:2F:CA:86:A6:F3:7F:C0:BC:C8:4D:3D:73:05:B8:5D:43
+a=setup:active
+a=mid:0
+a=inactive
+a=rtcp-mux
+a=rtcp-rsize
+a=rtpmap:96 VP8/90000
+a=rtcp-fb:96 goog-remb
+a=rtcp-fb:96 nack pli
+m=audio 9 UDP/TLS/RTP/SAVPF 111
+c=IN IP4 0.0.0.0
+a=rtcp:9 IN IP4 0.0.0.0
+a=ice-ufrag:BM2X
+a=ice-pwd:Vuhxchh+x99a/8vCJ+zvTF5P
+a=ice-options:trickle
+a=fingerprint:sha-256 93:2B:9C:F2:AD:0D:53:9B:4A:12:05:F9:00:94:7F:9F:2F:CA:86:A6:F3:7F:C0:BC:C8:4D:3D:73:05:B8:5D:43
+a=setup:active
+a=mid:1
+a=inactive
+a=rtcp-mux
+a=rtpmap:111 opus/48000/2
+a=fmtp:111 minptime=10;useinbandfec=1
+m=application 9 DTLS/SCTP 5000
+c=IN IP4 0.0.0.0
+a=ice-ufrag:BM2X
+a=ice-pwd:Vuhxchh+x99a/8vCJ+zvTF5P
+a=ice-options:trickle
+a=fingerprint:sha-256 93:2B:9C:F2:AD:0D:53:9B:4A:12:05:F9:00:94:7F:9F:2F:CA:86:A6:F3:7F:C0:BC:C8:4D:3D:73:05:B8:5D:43
+a=setup:active
+a=mid:2
+a=sctpmap:5000 webrtc-datachannel 1024
+
+2021-02-18T16:27:00.003299+07:00 [   pion:pc:info] signaling state changed to stable
+2021-02-18T16:27:00.003493+07:00 [ pion:ice:debug] Started agent: isControlling? true, remoteUfrag: "BM2X", remotePwd: "Vuhxchh+x99a/8vCJ+zvTF5P"
+2021-02-18T16:27:00.003564+07:00 [  pion:ice:info] Setting new connection state: Checking
+2021-02-18T16:27:00.003600+07:00 [   pion:pc:info] ICE connection state changed: checking
+2021-02-18T16:27:00.003628+07:00 [      signaller] [Inrz9icu9QFD78qchN77i3] Peer connection state changed: checking
+2021-02-18T16:27:00.003666+07:00 [     negotiator] [Inrz9icu9QFD78qchN77i3] Signaling state change: stable
+2021-02-18T16:27:00.003762+07:00 [ pion:ice:trace] pinging all candidates
+2021-02-18T16:27:00.003803+07:00 [  pion:ice:warn] pingAllCandidates called with no candidate pairs. Connection is not possible yet.
+2021-02-18T16:27:00.004647+07:00 [ pion:ice:debug] adding a new peer-reflexive candidate: 172.25.84.124:50265 
+2021-02-18T16:27:00.004872+07:00 [ pion:ice:trace] inbound STUN (Request) from 172.25.84.124:50265 to udp4 host 172.25.84.124:9001
+2021-02-18T16:27:00.004978+07:00 [ pion:ice:trace] pinging all candidates
+2021-02-18T16:27:00.005031+07:00 [ pion:ice:trace] ping STUN from udp4 host 172.25.84.124:9001 to udp4 prflx 172.25.84.124:50265 related :0
+
+2021-02-18T16:27:00.005100+07:00 [ pion:ice:trace] ping STUN from udp4 host 172.17.0.1:9008 to udp4 prflx 172.25.84.124:50265 related :0
+
+2021-02-18T16:27:00.006568+07:00 [ pion:ice:trace] inbound STUN (SuccessResponse) from udp4 prflx 172.25.84.124:50265 related :0 to udp4 host 172.25.84.124:9001
+2021-02-18T16:27:00.006658+07:00 [ pion:ice:trace] Found valid candidate pair: prio 7998392936314175488 (local, prio 2130706431) udp4 host 172.25.84.124:9001 <-> udp4 prflx 172.25.84.124:50265 related :0 (remote, prio 1862270975)
+2021-02-18T16:27:00.006867+07:00 [ pion:ice:trace] inbound STUN (SuccessResponse) from udp4 prflx 172.25.84.124:50265 related :0 to udp4 host 172.17.0.1:9008
+2021-02-18T16:27:00.006894+07:00 [ pion:ice:trace] Found valid candidate pair: prio 7998392936314175488 (local, prio 2130706431) udp4 host 172.17.0.1:9008 <-> udp4 prflx 172.25.84.124:50265 related :0 (remote, prio 1862270975)
+2021-02-18T16:27:00.012435+07:00 [      signaller] [Inrz9icu9QFD78qchN77i3] Remote signal.canidate: candidate:4169327835 1 udp 2122260223 172.25.84.124 50265 typ host generation 0 ufrag BM2X network-id 1 network-cost 10
+2021-02-18T16:27:00.012600+07:00 [ pion:ice:trace] pinging all candidates
+2021-02-18T16:27:00.012915+07:00 [ pion:ice:trace] ping STUN from udp4 host 172.25.84.124:9001 to udp4 host 172.25.84.124:50265
+
+2021-02-18T16:27:00.013316+07:00 [ pion:ice:trace] ping STUN from udp4 host 172.17.0.1:9008 to udp4 host 172.25.84.124:50265
+
+2021-02-18T16:27:00.014678+07:00 [ pion:ice:trace] inbound STUN (SuccessResponse) from udp4 prflx 172.25.84.124:50265 related :0 to udp4 host 172.17.0.1:9008
+2021-02-18T16:27:00.014805+07:00 [ pion:ice:trace] Found valid candidate pair: prio 7998392936314175488 (local, prio 2130706431) udp4 host 172.17.0.1:9008 <-> udp4 prflx 172.25.84.124:50265 related :0 (remote, prio 1862270975)
+2021-02-18T16:27:00.015109+07:00 [ pion:ice:trace] inbound STUN (SuccessResponse) from udp4 prflx 172.25.84.124:50265 related :0 to udp4 host 172.25.84.124:9001
+2021-02-18T16:27:00.015201+07:00 [ pion:ice:trace] Found valid candidate pair: prio 7998392936314175488 (local, prio 2130706431) udp4 host 172.25.84.124:9001 <-> udp4 prflx 172.25.84.124:50265 related :0 (remote, prio 1862270975)
+2021-02-18T16:27:00.020630+07:00 [      signaller] [Inrz9icu9QFD78qchN77i3] Got ice candidate (waiting)
+2021-02-18T16:27:00.020892+07:00 [      signaller] [Inrz9icu9QFD78qchN77i3] Got ice candidate (processing...)
+2021-02-18T16:27:00.020915+07:00 [      signaller] [Inrz9icu9QFD78qchN77i3] Got ice candidate from server peer: {__SERVER__ {{candidate:foundation 1 udp 1694498815 27.65.196.75 31922 typ srflx raddr 0.0.0.0 rport 9000 %!s(*string=<nil>) %!s(*uint16=0xc000038610) }}}
+2021-02-18T16:27:00.020957+07:00 [webrtctransport] [Inrz9icu9QFD78qchN77i3] ICE gathering state changed: complete
+2021-02-18T16:27:00.021120+07:00 [      signaller] [Inrz9icu9QFD78qchN77i3] Got ice candidate (waiting)
+2021-02-18T16:27:00.021194+07:00 [      signaller] [Inrz9icu9QFD78qchN77i3] Got ice candidate (processing...)
+2021-02-18T16:27:00.021081+07:00 [ pion:ice:trace] pinging all candidates
+2021-02-18T16:27:00.021348+07:00 [ pion:ice:trace] ping STUN from udp4 host 172.25.84.124:9001 to udp4 host 172.25.84.124:50265
+
+2021-02-18T16:27:00.021510+07:00 [ pion:ice:trace] ping STUN from udp4 host 172.17.0.1:9008 to udp4 host 172.25.84.124:50265
+
+2021-02-18T16:27:00.021679+07:00 [ pion:ice:trace] ping STUN from udp4 srflx 27.65.196.75:31922 related 0.0.0.0:9000 to udp4 prflx 172.25.84.124:50265 related :0
+
+2021-02-18T16:27:00.022065+07:00 [ pion:ice:trace] ping STUN from udp4 srflx 27.65.196.75:31922 related 0.0.0.0:9000 to udp4 host 172.25.84.124:50265
+
+2021-02-18T16:27:00.022139+07:00 [ pion:ice:trace] inbound STUN (SuccessResponse) from udp4 prflx 172.25.84.124:50265 related :0 to udp4 host 172.25.84.124:9001
+2021-02-18T16:27:00.022158+07:00 [ pion:ice:trace] Found valid candidate pair: prio 7998392936314175488 (local, prio 2130706431) udp4 host 172.25.84.124:9001 <-> udp4 prflx 172.25.84.124:50265 related :0 (remote, prio 1862270975)
+2021-02-18T16:27:00.022467+07:00 [ pion:ice:trace] inbound STUN (SuccessResponse) from udp4 prflx 172.25.84.124:50265 related :0 to udp4 host 172.17.0.1:9008
+2021-02-18T16:27:00.022549+07:00 [ pion:ice:trace] Found valid candidate pair: prio 7998392936314175488 (local, prio 2130706431) udp4 host 172.17.0.1:9008 <-> udp4 prflx 172.25.84.124:50265 related :0 (remote, prio 1862270975)
+2021-02-18T16:27:00.022793+07:00 [ pion:ice:trace] inbound STUN (SuccessResponse) from udp4 prflx 172.25.84.124:50265 related :0 to udp4 srflx 27.65.196.75:31922 related 0.0.0.0:9000
+2021-02-18T16:27:00.022836+07:00 [ pion:ice:trace] Found valid candidate pair: prio 7277816995565797375 (local, prio 1694498815) udp4 srflx 27.65.196.75:31922 related 0.0.0.0:9000 <-> udp4 prflx 172.25.84.124:50265 related :0 (remote, prio 1862270975)
+2021-02-18T16:27:00.022957+07:00 [ pion:ice:trace] inbound STUN (SuccessResponse) from udp4 prflx 172.25.84.124:50265 related :0 to udp4 srflx 27.65.196.75:31922 related 0.0.0.0:9000
+2021-02-18T16:27:00.022978+07:00 [ pion:ice:trace] Found valid candidate pair: prio 7277816995565797375 (local, prio 1694498815) udp4 srflx 27.65.196.75:31922 related 0.0.0.0:9000 <-> udp4 prflx 172.25.84.124:50265 related :0 (remote, prio 1862270975)
+2021-02-18T16:27:00.053027+07:00 [ pion:ice:trace] inbound STUN (Request) from 172.25.84.124:50265 to udp4 host 172.25.84.124:9001
+2021-02-18T16:27:00.101249+07:00 [ pion:ice:trace] inbound STUN (Request) from 172.25.84.124:50265 to udp4 host 172.25.84.124:9001
+2021-02-18T16:27:00.149522+07:00 [ pion:ice:trace] inbound STUN (Request) from 172.25.84.124:50265 to udp4 host 172.17.0.1:9008
+2021-02-18T16:27:00.198369+07:00 [ pion:ice:trace] inbound STUN (Request) from 172.25.84.124:50265 to udp4 srflx 27.65.196.75:31922 related 0.0.0.0:9000
+2021-02-18T16:27:00.222432+07:00 [ pion:ice:trace] pinging all candidates
+2021-02-18T16:27:00.222763+07:00 [ pion:ice:trace] ping STUN from udp4 host 172.25.84.124:9001 to udp4 host 172.25.84.124:50265
+
+2021-02-18T16:27:00.223099+07:00 [ pion:ice:trace] ping STUN from udp4 host 172.17.0.1:9008 to udp4 host 172.25.84.124:50265
+
+2021-02-18T16:27:00.223365+07:00 [ pion:ice:trace] ping STUN from udp4 srflx 27.65.196.75:31922 related 0.0.0.0:9000 to udp4 host 172.25.84.124:50265
+
+2021-02-18T16:27:00.224659+07:00 [ pion:ice:trace] inbound STUN (SuccessResponse) from udp4 prflx 172.25.84.124:50265 related :0 to udp4 host 172.25.84.124:9001
+2021-02-18T16:27:00.224739+07:00 [ pion:ice:trace] Found valid candidate pair: prio 7998392936314175488 (local, prio 2130706431) udp4 host 172.25.84.124:9001 <-> udp4 prflx 172.25.84.124:50265 related :0 (remote, prio 1862270975)
+2021-02-18T16:27:00.224878+07:00 [ pion:ice:trace] inbound STUN (SuccessResponse) from udp4 prflx 172.25.84.124:50265 related :0 to udp4 host 172.17.0.1:9008
+2021-02-18T16:27:00.224909+07:00 [ pion:ice:trace] Found valid candidate pair: prio 7998392936314175488 (local, prio 2130706431) udp4 host 172.17.0.1:9008 <-> udp4 prflx 172.25.84.124:50265 related :0 (remote, prio 1862270975)
+2021-02-18T16:27:00.224948+07:00 [ pion:ice:trace] inbound STUN (SuccessResponse) from udp4 prflx 172.25.84.124:50265 related :0 to udp4 srflx 27.65.196.75:31922 related 0.0.0.0:9000
+2021-02-18T16:27:00.224965+07:00 [ pion:ice:trace] Found valid candidate pair: prio 7277816995565797375 (local, prio 1694498815) udp4 srflx 27.65.196.75:31922 related 0.0.0.0:9000 <-> udp4 prflx 172.25.84.124:50265 related :0 (remote, prio 1862270975)
+2021-02-18T16:27:00.247182+07:00 [ pion:ice:debug] adding a new peer-reflexive candidate: 172.25.84.124:12248 
+2021-02-18T16:27:00.247317+07:00 [ pion:ice:trace] inbound STUN (Request) from 172.25.84.124:12248 to udp4 host 172.17.0.1:9008
+2021-02-18T16:27:00.247542+07:00 [ pion:ice:trace] pinging all candidates
+2021-02-18T16:27:00.247667+07:00 [ pion:ice:trace] ping STUN from udp4 host 172.25.84.124:9001 to udp4 host 172.25.84.124:50265
+
+2021-02-18T16:27:00.247940+07:00 [ pion:ice:trace] ping STUN from udp4 host 172.17.0.1:9008 to udp4 host 172.25.84.124:50265
+
+2021-02-18T16:27:00.248187+07:00 [ pion:ice:trace] ping STUN from udp4 srflx 27.65.196.75:31922 related 0.0.0.0:9000 to udp4 host 172.25.84.124:50265
+
+2021-02-18T16:27:00.248264+07:00 [ pion:ice:trace] ping STUN from udp4 host 172.25.84.124:9001 to udp4 prflx 172.25.84.124:12248 related :0
+
+2021-02-18T16:27:00.248374+07:00 [ pion:ice:trace] ping STUN from udp4 host 172.17.0.1:9008 to udp4 prflx 172.25.84.124:12248 related :0
+
+2021-02-18T16:27:00.248435+07:00 [ pion:ice:trace] ping STUN from udp4 srflx 27.65.196.75:31922 related 0.0.0.0:9000 to udp4 prflx 172.25.84.124:12248 related :0
+
+2021-02-18T16:27:00.248862+07:00 [ pion:ice:trace] inbound STUN (SuccessResponse) from udp4 prflx 172.25.84.124:50265 related :0 to udp4 host 172.25.84.124:9001
+2021-02-18T16:27:00.248927+07:00 [ pion:ice:trace] Found valid candidate pair: prio 7998392936314175488 (local, prio 2130706431) udp4 host 172.25.84.124:9001 <-> udp4 prflx 172.25.84.124:50265 related :0 (remote, prio 1862270975)
+2021-02-18T16:27:00.249007+07:00 [ pion:ice:trace] inbound STUN (SuccessResponse) from udp4 prflx 172.25.84.124:50265 related :0 to udp4 host 172.17.0.1:9008
+2021-02-18T16:27:00.249028+07:00 [ pion:ice:trace] Found valid candidate pair: prio 7998392936314175488 (local, prio 2130706431) udp4 host 172.17.0.1:9008 <-> udp4 prflx 172.25.84.124:50265 related :0 (remote, prio 1862270975)
+2021-02-18T16:27:00.249081+07:00 [ pion:ice:trace] inbound STUN (SuccessResponse) from udp4 prflx 172.25.84.124:50265 related :0 to udp4 srflx 27.65.196.75:31922 related 0.0.0.0:9000
+2021-02-18T16:27:00.249101+07:00 [ pion:ice:trace] Found valid candidate pair: prio 7277816995565797375 (local, prio 1694498815) udp4 srflx 27.65.196.75:31922 related 0.0.0.0:9000 <-> udp4 prflx 172.25.84.124:50265 related :0 (remote, prio 1862270975)
+2021-02-18T16:27:00.249148+07:00 [ pion:ice:trace] inbound STUN (SuccessResponse) from udp4 prflx 172.25.84.124:12248 related :0 to udp4 host 172.17.0.1:9008
+2021-02-18T16:27:00.249165+07:00 [ pion:ice:trace] Found valid candidate pair: prio 7998392936314175488 (local, prio 2130706431) udp4 host 172.17.0.1:9008 <-> udp4 prflx 172.25.84.124:12248 related :0 (remote, prio 1862270975)
+2021-02-18T16:27:00.343536+07:00 [ pion:ice:trace] inbound STUN (Request) from 172.25.84.124:50265 to udp4 host 172.17.0.1:9008
+2021-02-18T16:27:00.391962+07:00 [ pion:ice:trace] inbound STUN (Request) from 172.25.84.124:50265 to udp4 srflx 27.65.196.75:31922 related 0.0.0.0:9000
+2021-02-18T16:27:00.440192+07:00 [ pion:ice:trace] inbound STUN (Request) from 172.25.84.124:12248 to udp4 host 172.17.0.1:9008
+2021-02-18T16:27:00.448635+07:00 [ pion:ice:trace] pinging all candidates
+2021-02-18T16:27:00.448748+07:00 [ pion:ice:trace] ping STUN from udp4 host 172.25.84.124:9001 to udp4 host 172.25.84.124:50265
+
+2021-02-18T16:27:00.448844+07:00 [ pion:ice:trace] ping STUN from udp4 host 172.17.0.1:9008 to udp4 host 172.25.84.124:50265
+
+2021-02-18T16:27:00.448905+07:00 [ pion:ice:trace] ping STUN from udp4 srflx 27.65.196.75:31922 related 0.0.0.0:9000 to udp4 host 172.25.84.124:50265
+
+2021-02-18T16:27:00.448973+07:00 [ pion:ice:trace] ping STUN from udp4 host 172.25.84.124:9001 to udp4 prflx 172.25.84.124:12248 related :0
+
+2021-02-18T16:27:00.449055+07:00 [ pion:ice:trace] ping STUN from udp4 srflx 27.65.196.75:31922 related 0.0.0.0:9000 to udp4 prflx 172.25.84.124:12248 related :0
+
+2021-02-18T16:27:00.449199+07:00 [ pion:ice:trace] inbound STUN (SuccessResponse) from udp4 prflx 172.25.84.124:50265 related :0 to udp4 host 172.25.84.124:9001
+2021-02-18T16:27:00.449232+07:00 [ pion:ice:trace] Found valid candidate pair: prio 7998392936314175488 (local, prio 2130706431) udp4 host 172.25.84.124:9001 <-> udp4 prflx 172.25.84.124:50265 related :0 (remote, prio 1862270975)
+2021-02-18T16:27:00.449300+07:00 [ pion:ice:trace] inbound STUN (SuccessResponse) from udp4 prflx 172.25.84.124:50265 related :0 to udp4 host 172.17.0.1:9008
+2021-02-18T16:27:00.449322+07:00 [ pion:ice:trace] Found valid candidate pair: prio 7998392936314175488 (local, prio 2130706431) udp4 host 172.17.0.1:9008 <-> udp4 prflx 172.25.84.124:50265 related :0 (remote, prio 1862270975)
+2021-02-18T16:27:00.449440+07:00 [ pion:ice:trace] inbound STUN (SuccessResponse) from udp4 prflx 172.25.84.124:50265 related :0 to udp4 srflx 27.65.196.75:31922 related 0.0.0.0:9000
+2021-02-18T16:27:00.449467+07:00 [ pion:ice:trace] Found valid candidate pair: prio 7277816995565797375 (local, prio 1694498815) udp4 srflx 27.65.196.75:31922 related 0.0.0.0:9000 <-> udp4 prflx 172.25.84.124:50265 related :0 (remote, prio 1862270975)
+2021-02-18T16:27:00.536812+07:00 [ pion:ice:trace] inbound STUN (Request) from 172.25.84.124:50265 to udp4 host 172.17.0.1:9008
+2021-02-18T16:27:00.585084+07:00 [ pion:ice:trace] inbound STUN (Request) from 172.25.84.124:50265 to udp4 srflx 27.65.196.75:31922 related 0.0.0.0:9000
+2021-02-18T16:27:00.633297+07:00 [ pion:ice:trace] inbound STUN (Request) from 172.25.84.124:12248 to udp4 host 172.17.0.1:9008
+2021-02-18T16:27:00.649212+07:00 [ pion:ice:trace] pinging all candidates
+2021-02-18T16:27:00.649312+07:00 [ pion:ice:trace] ping STUN from udp4 host 172.25.84.124:9001 to udp4 host 172.25.84.124:50265
+
+2021-02-18T16:27:00.649434+07:00 [ pion:ice:trace] ping STUN from udp4 host 172.17.0.1:9008 to udp4 host 172.25.84.124:50265
+
+2021-02-18T16:27:00.649504+07:00 [ pion:ice:trace] ping STUN from udp4 srflx 27.65.196.75:31922 related 0.0.0.0:9000 to udp4 host 172.25.84.124:50265
+
+2021-02-18T16:27:00.649569+07:00 [ pion:ice:trace] ping STUN from udp4 host 172.25.84.124:9001 to udp4 prflx 172.25.84.124:12248 related :0
+
+2021-02-18T16:27:00.649646+07:00 [ pion:ice:trace] ping STUN from udp4 srflx 27.65.196.75:31922 related 0.0.0.0:9000 to udp4 prflx 172.25.84.124:12248 related :0
+
+2021-02-18T16:27:00.649878+07:00 [ pion:ice:trace] inbound STUN (SuccessResponse) from udp4 prflx 172.25.84.124:50265 related :0 to udp4 host 172.25.84.124:9001
+2021-02-18T16:27:00.649916+07:00 [ pion:ice:trace] Found valid candidate pair: prio 7998392936314175488 (local, prio 2130706431) udp4 host 172.25.84.124:9001 <-> udp4 prflx 172.25.84.124:50265 related :0 (remote, prio 1862270975)
+2021-02-18T16:27:00.649963+07:00 [ pion:ice:trace] inbound STUN (SuccessResponse) from udp4 prflx 172.25.84.124:50265 related :0 to udp4 host 172.17.0.1:9008
+2021-02-18T16:27:00.649987+07:00 [ pion:ice:trace] Found valid candidate pair: prio 7998392936314175488 (local, prio 2130706431) udp4 host 172.17.0.1:9008 <-> udp4 prflx 172.25.84.124:50265 related :0 (remote, prio 1862270975)
+2021-02-18T16:27:00.650025+07:00 [ pion:ice:trace] inbound STUN (SuccessResponse) from udp4 prflx 172.25.84.124:50265 related :0 to udp4 srflx 27.65.196.75:31922 related 0.0.0.0:9000
+2021-02-18T16:27:00.650047+07:00 [ pion:ice:trace] Found valid candidate pair: prio 7277816995565797375 (local, prio 1694498815) udp4 srflx 27.65.196.75:31922 related 0.0.0.0:9000 <-> udp4 prflx 172.25.84.124:50265 related :0 (remote, prio 1862270975)
+2021-02-18T16:27:00.849942+07:00 [ pion:ice:trace] pinging all candidates
+2021-02-18T16:27:00.850139+07:00 [ pion:ice:trace] ping STUN from udp4 host 172.25.84.124:9001 to udp4 host 172.25.84.124:50265
+
+2021-02-18T16:27:00.850395+07:00 [ pion:ice:trace] ping STUN from udp4 host 172.17.0.1:9008 to udp4 host 172.25.84.124:50265
+
+2021-02-18T16:27:00.850593+07:00 [ pion:ice:trace] ping STUN from udp4 srflx 27.65.196.75:31922 related 0.0.0.0:9000 to udp4 host 172.25.84.124:50265
+
+2021-02-18T16:27:00.850774+07:00 [ pion:ice:trace] ping STUN from udp4 host 172.25.84.124:9001 to udp4 prflx 172.25.84.124:12248 related :0
+
+2021-02-18T16:27:00.851001+07:00 [ pion:ice:trace] ping STUN from udp4 srflx 27.65.196.75:31922 related 0.0.0.0:9000 to udp4 prflx 172.25.84.124:12248 related :0
+
+2021-02-18T16:27:00.851389+07:00 [ pion:ice:trace] inbound STUN (SuccessResponse) from udp4 prflx 172.25.84.124:50265 related :0 to udp4 host 172.25.84.124:9001
+2021-02-18T16:27:00.851617+07:00 [ pion:ice:trace] Found valid candidate pair: prio 7998392936314175488 (local, prio 2130706431) udp4 host 172.25.84.124:9001 <-> udp4 prflx 172.25.84.124:50265 related :0 (remote, prio 1862270975)
+2021-02-18T16:27:00.851771+07:00 [ pion:ice:trace] inbound STUN (SuccessResponse) from udp4 prflx 172.25.84.124:50265 related :0 to udp4 host 172.17.0.1:9008
+2021-02-18T16:27:00.851854+07:00 [ pion:ice:trace] Found valid candidate pair: prio 7998392936314175488 (local, prio 2130706431) udp4 host 172.17.0.1:9008 <-> udp4 prflx 172.25.84.124:50265 related :0 (remote, prio 1862270975)
+2021-02-18T16:27:00.852345+07:00 [ pion:ice:trace] inbound STUN (SuccessResponse) from udp4 prflx 172.25.84.124:50265 related :0 to udp4 srflx 27.65.196.75:31922 related 0.0.0.0:9000
+2021-02-18T16:27:00.852519+07:00 [ pion:ice:trace] Found valid candidate pair: prio 7277816995565797375 (local, prio 1694498815) udp4 srflx 27.65.196.75:31922 related 0.0.0.0:9000 <-> udp4 prflx 172.25.84.124:50265 related :0 (remote, prio 1862270975)
+2021-02-18T16:27:01.051624+07:00 [ pion:ice:trace] Nominatable pair found, nominating (udp4 host 172.25.84.124:9001, udp4 prflx 172.25.84.124:50265 related :0)
+2021-02-18T16:27:01.051968+07:00 [ pion:ice:trace] ping STUN (nominate candidate pair) from udp4 host 172.25.84.124:9001 to udp4 prflx 172.25.84.124:50265 related :0
+
+2021-02-18T16:27:01.052061+07:00 [ pion:ice:trace] ping STUN from udp4 host 172.25.84.124:9001 to udp4 prflx 172.25.84.124:50265 related :0
+
+2021-02-18T16:27:01.053561+07:00 [ pion:ice:trace] inbound STUN (SuccessResponse) from udp4 prflx 172.25.84.124:50265 related :0 to udp4 host 172.25.84.124:9001
+2021-02-18T16:27:01.053648+07:00 [ pion:ice:trace] Found valid candidate pair: prio 7998392936314175488 (local, prio 2130706431) udp4 host 172.25.84.124:9001 <-> udp4 prflx 172.25.84.124:50265 related :0 (remote, prio 1862270975)
+2021-02-18T16:27:01.053705+07:00 [ pion:ice:trace] Set selected candidate pair: prio 7998392936314175488 (local, prio 2130706431) udp4 host 172.25.84.124:9001 <-> udp4 prflx 172.25.84.124:50265 related :0 (remote, prio 1862270975)
+2021-02-18T16:27:01.053772+07:00 [  pion:ice:info] Setting new connection state: Connected
+2021-02-18T16:27:01.053865+07:00 [   pion:pc:info] ICE connection state changed: connected
+2021-02-18T16:27:01.053925+07:00 [      signaller] [Inrz9icu9QFD78qchN77i3] Peer connection state changed: connected
+2021-02-18T16:27:01.054082+07:00 [pion:dtls:trace] [handshake:server] Flight 0: Preparing
+2021-02-18T16:27:01.054182+07:00 [pion:dtls:trace] [handshake:server] Flight 0: Sending
+2021-02-18T16:27:01.054207+07:00 [pion:dtls:trace] [handshake:server] Flight 0: Waiting
+2021-02-18T16:27:01.054488+07:00 [pion:dtls:trace] [handshake:server] Flight 0 -> Flight 2
+2021-02-18T16:27:01.054565+07:00 [pion:dtls:trace] [handshake:server] Flight 2: Preparing
+2021-02-18T16:27:01.054648+07:00 [pion:dtls:trace] [handshake:server] Flight 2: Sending
+2021-02-18T16:27:01.054702+07:00 [pion:dtls:trace] [handshake:server] -> HelloVerifyRequest (epoch: 0, seq: 0)
+2021-02-18T16:27:01.054911+07:00 [pion:dtls:trace] [handshake:server] Flight 2: Waiting
+2021-02-18T16:27:01.055025+07:00 [pion:dtls:trace] [handshake:server] Flight 2 -> Flight 2
+2021-02-18T16:27:01.055083+07:00 [pion:dtls:trace] [handshake:server] Flight 2: Preparing
+2021-02-18T16:27:01.055259+07:00 [pion:dtls:trace] [handshake:server] Flight 2: Sending
+2021-02-18T16:27:01.055319+07:00 [pion:dtls:trace] [handshake:server] -> HelloVerifyRequest (epoch: 0, seq: 0)
+2021-02-18T16:27:01.055512+07:00 [pion:dtls:trace] [handshake:server] Flight 2: Waiting
+2021-02-18T16:27:01.055892+07:00 [pion:dtls:trace] [handshake:server] Flight 2 -> Flight 2
+2021-02-18T16:27:01.055945+07:00 [pion:dtls:trace] [handshake:server] Flight 2: Preparing
+2021-02-18T16:27:01.055996+07:00 [pion:dtls:trace] [handshake:server] Flight 2: Sending
+2021-02-18T16:27:01.056039+07:00 [pion:dtls:trace] [handshake:server] -> HelloVerifyRequest (epoch: 0, seq: 0)
+2021-02-18T16:27:01.056177+07:00 [pion:dtls:trace] [handshake:server] Flight 2: Waiting
+2021-02-18T16:27:01.056290+07:00 [pion:dtls:trace] [handshake:server] Flight 2 -> Flight 2
+2021-02-18T16:27:01.056347+07:00 [pion:dtls:trace] [handshake:server] Flight 2: Preparing
+2021-02-18T16:27:01.056406+07:00 [pion:dtls:trace] [handshake:server] Flight 2: Sending
+2021-02-18T16:27:01.056457+07:00 [pion:dtls:trace] [handshake:server] -> HelloVerifyRequest (epoch: 0, seq: 0)
+2021-02-18T16:27:01.056572+07:00 [pion:dtls:trace] [handshake:server] Flight 2: Waiting
+2021-02-18T16:27:01.056687+07:00 [pion:dtls:trace] [handshake:server] Flight 2 -> Flight 2
+2021-02-18T16:27:01.056740+07:00 [pion:dtls:trace] [handshake:server] Flight 2: Preparing
+2021-02-18T16:27:01.056769+07:00 [pion:dtls:trace] [handshake:server] Flight 2: Sending
+2021-02-18T16:27:01.056860+07:00 [pion:dtls:trace] [handshake:server] -> HelloVerifyRequest (epoch: 0, seq: 0)
+2021-02-18T16:27:01.056949+07:00 [pion:dtls:trace] [handshake:server] Flight 2: Waiting
+2021-02-18T16:27:01.057061+07:00 [pion:dtls:trace] [handshake:server] Flight 2 -> Flight 4
+2021-02-18T16:27:01.057124+07:00 [pion:dtls:trace] [handshake:server] Flight 4: Preparing
+2021-02-18T16:27:01.057668+07:00 [pion:dtls:trace] [handshake:server] Flight 4: Sending
+2021-02-18T16:27:01.057724+07:00 [pion:dtls:trace] [handshake:server] -> ServerHello (epoch: 0, seq: 1)
+2021-02-18T16:27:01.057766+07:00 [pion:dtls:trace] [handshake:server] -> TypeCertificate (epoch: 0, seq: 2)
+2021-02-18T16:27:01.057797+07:00 [pion:dtls:trace] [handshake:server] -> ServerKeyExchange (epoch: 0, seq: 3)
+2021-02-18T16:27:01.057834+07:00 [pion:dtls:trace] [handshake:server] -> CertificateRequest (epoch: 0, seq: 4)
+2021-02-18T16:27:01.057869+07:00 [pion:dtls:trace] [handshake:server] -> ServerHelloDone (epoch: 0, seq: 5)
+2021-02-18T16:27:01.057957+07:00 [pion:dtls:trace] [handshake:server] Flight 4: Waiting
+2021-02-18T16:27:01.060101+07:00 [pion:dtls:debug] CipherSuite not initialized, queuing packet
+2021-02-18T16:27:01.060157+07:00 [pion:dtls:debug] received packet of next epoch, queuing packet
+2021-02-18T16:27:01.060956+07:00 [pion:dtls:trace] server: <- ChangeCipherSpec (epoch: 1)
+2021-02-18T16:27:01.061034+07:00 [pion:dtls:trace] [handshake:server] Flight 4 -> Flight 6
+2021-02-18T16:27:01.061113+07:00 [pion:dtls:trace] [handshake:server] Flight 6: Preparing
+2021-02-18T16:27:01.061182+07:00 [pion:dtls:trace] [handshake:server] -> changeCipherSpec (epoch: 1)
+2021-02-18T16:27:01.061218+07:00 [pion:dtls:trace] [handshake:server] Flight 6: Sending
+2021-02-18T16:27:01.061255+07:00 [pion:dtls:trace] [handshake:server] -> Finished (epoch: 1, seq: 6)
+2021-02-18T16:27:01.061411+07:00 [pion:dtls:trace] [handshake:server] Flight 6: Finished
+2021-02-18T16:27:01.061506+07:00 [pion:dtls:trace] Handshake Completed
+2021-02-18T16:27:01.061847+07:00 [   pion:pc:info] peer connection state changed: connected
+2021-02-18T16:27:01.061996+07:00 [pion:sctp:trace] [0xc0004fc000] updated cwnd=4380 ssthresh=0 inflight=0 (INI)
+2021-02-18T16:27:01.062059+07:00 [pion:sctp:debug] [0xc0004fc000] state change: 'Closed' => 'CookieWait'
+2021-02-18T16:27:01.062093+07:00 [pion:sctp:debug] [0xc0004fc000] sending INIT
+2021-02-18T16:27:01.062143+07:00 [pion:sctp:debug] [0xc0004fc000] readLoop entered
+2021-02-18T16:27:01.062266+07:00 [pion:sctp:debug] [0xc0004fc000] writeLoop entered
+2021-02-18T16:27:01.072033+07:00 [pion:sctp:debug] [0xc0004fc000] chunkInit received in state 'CookieWait'
+2021-02-18T16:27:01.072126+07:00 [pion:sctp:debug] [0xc0004fc000] use ForwardTSN (on init)
+
+2021-02-18T16:27:01.072212+07:00 [pion:sctp:debug] [0xc0004fc000] chunkInitAck received in state 'CookieWait'
+2021-02-18T16:27:01.072238+07:00 [pion:sctp:debug] [0xc0004fc000] initial rwnd=131072
+2021-02-18T16:27:01.072260+07:00 [pion:sctp:trace] [0xc0004fc000] updated cwnd=4380 ssthresh=131072 inflight=0 (INI)
+2021-02-18T16:27:01.072283+07:00 [pion:sctp:debug] [0xc0004fc000] use ForwardTSN (on initAck)
+
+2021-02-18T16:27:01.072309+07:00 [pion:sctp:debug] [0xc0004fc000] sending COOKIE-ECHO
+2021-02-18T16:27:01.072333+07:00 [pion:sctp:debug] [0xc0004fc000] state change: 'CookieWait' => 'CookieEchoed'
+2021-02-18T16:27:01.073192+07:00 [pion:sctp:debug] [0xc0004fc000] COOKIE-ECHO received in state 'CookieEchoed'
+2021-02-18T16:27:01.073259+07:00 [pion:sctp:debug] [0xc0004fc000] state change: 'CookieEchoed' => 'Established'
+2021-02-18T16:27:01.073384+07:00 [pion:sctp:trace] [1:0xc0004fc000] bufferedAmount = 16
+2021-02-18T16:27:01.073534+07:00 [pion:sctp:trace] [0xc0004fc000] sending ppi=50 tsn=804584650 ssn=0 sent=1 len=16 (true,true)
+2021-02-18T16:27:01.073654+07:00 [pion:sctp:trace] [0xc0004fc000] T3-rtx timer start (pt1)
+2021-02-18T16:27:01.073723+07:00 [pion:sctp:debug] [0xc0004fc000] COOKIE-ACK received in state 'Established'
+2021-02-18T16:27:01.074130+07:00 [pion:sctp:trace] [0xc0004fc000] SACK: cumTSN=804584650 a_rwnd=131072
+2021-02-18T16:27:01.074190+07:00 [pion:sctp:trace] [0xc0004fc000] SACK: measured-rtt=0.656717 srtt=0.656717 new-rto=1000.000000
+2021-02-18T16:27:01.074257+07:00 [pion:sctp:trace] [0xc0004fc000] SACK: cumTSN advanced: 804584649 -> 804584650
+2021-02-18T16:27:01.074319+07:00 [pion:sctp:trace] [0xc0004fc000] SACK: no more packet in-flight (pending=0)
+2021-02-18T16:27:01.074345+07:00 [pion:sctp:trace] [0xc0004fc000] cwnd did not grow: cwnd=4380 ssthresh=131072 acked=16 FR=false pending=0
+2021-02-18T16:27:01.074372+07:00 [pion:sctp:trace] [1:0xc0004fc000] bufferedAmount = 0
+2021-02-18T16:27:01.074417+07:00 [pion:sctp:trace] [0xc0004fc000] DATA: tsn=1834180378 immediateSack=false len=1
+2021-02-18T16:27:01.074447+07:00 [pion:sctp:debug] [1:0xc0004fc000] reassemblyQueue readable=true
+2021-02-18T16:27:01.074468+07:00 [pion:sctp:debug] [1:0xc0004fc000] readNotifier.signal()
+2021-02-18T16:27:01.074485+07:00 [pion:sctp:debug] [1:0xc0004fc000] readNotifier.signal() done
+2021-02-18T16:27:01.074512+07:00 [pion:datachannel:debug] Received DATA_CHANNEL_ACK
+2021-02-18T16:27:01.074563+07:00 [pion:sctp:debug] [1:0xc0004fc000] reliability params: ordered=true type=0 value=0
+2021-02-18T16:27:01.086692+07:00 [      signaller] [Inrz9icu9QFD78qchN77i3] Remote signal.renegotiate
+2021-02-18T16:27:01.086765+07:00 [      signaller] [Inrz9icu9QFD78qchN77i3] Calling signaller.Negotiate() because remote peer wanted to negotiate
+2021-02-18T16:27:01.086785+07:00 [     negotiator] [Inrz9icu9QFD78qchN77i3] Negotiate
+2021-02-18T16:27:01.086800+07:00 [     negotiator] [Inrz9icu9QFD78qchN77i3] Negotiate: start
+2021-02-18T16:27:01.086813+07:00 [     negotiator] [Inrz9icu9QFD78qchN77i3] negotiate: creating offer
+2021-02-18T16:27:01.087157+07:00 [            sdp] [Inrz9icu9QFD78qchN77i3] Local signal.type: offer, signal.sdp: v=0
+o=- 3195217844268333912 1613640421 IN IP4 0.0.0.0
+s=-
+t=0 0
+a=fingerprint:sha-256 8E:2B:1D:A9:8C:EA:89:69:EF:45:E2:A4:33:39:3A:19:0B:15:34:08:E9:5F:47:6F:3F:36:A7:CA:55:B5:88:84
+a=group:BUNDLE 0 1 2
+m=video 9 UDP/TLS/RTP/SAVPF 96
+c=IN IP4 0.0.0.0
+a=setup:actpass
+a=mid:0
+a=ice-ufrag:KClaCUwmdbjtIHBf
+a=ice-pwd:tdgjIJUttWUwaqayRNfrtZvzjOBGcTMG
+a=rtcp-mux
+a=rtcp-rsize
+a=rtpmap:96 VP8/90000
+a=rtcp-fb:96 goog-remb 
+a=rtcp-fb:96 nack pli
+a=recvonly
+a=candidate:foundation 1 udp 2130706431 172.25.84.124 9001 typ host generation 0
+a=candidate:foundation 2 udp 2130706431 172.25.84.124 9001 typ host generation 0
+a=candidate:foundation 1 udp 2130706431 172.17.0.1 9008 typ host generation 0
+a=candidate:foundation 2 udp 2130706431 172.17.0.1 9008 typ host generation 0
+a=candidate:foundation 1 udp 1694498815 27.65.196.75 31922 typ srflx raddr 0.0.0.0 rport 9000 generation 0
+a=candidate:foundation 2 udp 1694498815 27.65.196.75 31922 typ srflx raddr 0.0.0.0 rport 9000 generation 0
+a=end-of-candidates
+m=audio 9 UDP/TLS/RTP/SAVPF 111
+c=IN IP4 0.0.0.0
+a=setup:actpass
+a=mid:1
+a=ice-ufrag:KClaCUwmdbjtIHBf
+a=ice-pwd:tdgjIJUttWUwaqayRNfrtZvzjOBGcTMG
+a=rtcp-mux
+a=rtcp-rsize
+a=rtpmap:111 opus/48000/2
+a=fmtp:111 minptime=10;useinbandfec=1
+a=recvonly
+a=candidate:foundation 1 udp 2130706431 172.25.84.124 9001 typ host generation 0
+a=candidate:foundation 2 udp 2130706431 172.25.84.124 9001 typ host generation 0
+a=candidate:foundation 1 udp 2130706431 172.17.0.1 9008 typ host generation 0
+a=candidate:foundation 2 udp 2130706431 172.17.0.1 9008 typ host generation 0
+a=candidate:foundation 1 udp 1694498815 27.65.196.75 31922 typ srflx raddr 0.0.0.0 rport 9000 generation 0
+a=candidate:foundation 2 udp 1694498815 27.65.196.75 31922 typ srflx raddr 0.0.0.0 rport 9000 generation 0
+a=end-of-candidates
+m=application 9 DTLS/SCTP 5000
+c=IN IP4 0.0.0.0
+a=setup:actpass
+a=mid:2
+a=sendrecv
+a=sctpmap:5000 webrtc-datachannel 1024
+a=ice-ufrag:KClaCUwmdbjtIHBf
+a=ice-pwd:tdgjIJUttWUwaqayRNfrtZvzjOBGcTMG
+a=candidate:foundation 1 udp 2130706431 172.25.84.124 9001 typ host generation 0
+a=candidate:foundation 2 udp 2130706431 172.25.84.124 9001 typ host generation 0
+a=candidate:foundation 1 udp 2130706431 172.17.0.1 9008 typ host generation 0
+a=candidate:foundation 2 udp 2130706431 172.17.0.1 9008 typ host generation 0
+a=candidate:foundation 1 udp 1694498815 27.65.196.75 31922 typ srflx raddr 0.0.0.0 rport 9000 generation 0
+a=candidate:foundation 2 udp 1694498815 27.65.196.75 31922 typ srflx raddr 0.0.0.0 rport 9000 generation 0
+a=end-of-candidates
+
+2021-02-18T16:27:01.087311+07:00 [      signaller] [Inrz9icu9QFD78qchN77i3] handle local offer setting local desc
+2021-02-18T16:27:01.087391+07:00 [   pion:pc:info] signaling state changed to have-local-offer
+2021-02-18T16:27:01.087430+07:00 [     negotiator] [Inrz9icu9QFD78qchN77i3] Signaling state change: have-local-offer
+2021-02-18T16:27:01.113893+07:00 [            sdp] [Inrz9icu9QFD78qchN77i3] Remote signal.type: answer, signal.sdp: v=0
+o=- 8177614781066156948 3 IN IP4 127.0.0.1
+s=-
+t=0 0
+a=group:BUNDLE 0 1 2
+a=msid-semantic: WMS QTmfFx9DVWRWWGZcKdFUIWEWpcgSwzRpr2hq
+m=video 50265 UDP/TLS/RTP/SAVPF 96
+c=IN IP4 172.25.84.124
+a=rtcp:9 IN IP4 0.0.0.0
+a=candidate:4169327835 1 udp 2122260223 172.25.84.124 50265 typ host generation 0 network-id 1 network-cost 10
+a=ice-ufrag:BM2X
+a=ice-pwd:Vuhxchh+x99a/8vCJ+zvTF5P
+a=ice-options:trickle
+a=fingerprint:sha-256 93:2B:9C:F2:AD:0D:53:9B:4A:12:05:F9:00:94:7F:9F:2F:CA:86:A6:F3:7F:C0:BC:C8:4D:3D:73:05:B8:5D:43
+a=setup:active
+a=mid:0
+a=sendonly
+a=msid:QTmfFx9DVWRWWGZcKdFUIWEWpcgSwzRpr2hq e48c9721-51dc-4aab-bed5-9fca13583f6d
+a=rtcp-mux
+a=rtcp-rsize
+a=rtpmap:96 VP8/90000
+a=rtcp-fb:96 goog-remb
+a=rtcp-fb:96 nack pli
+a=ssrc:308240014 cname:zOlMYHemYXfOHyTR
+a=ssrc:308240014 msid:QTmfFx9DVWRWWGZcKdFUIWEWpcgSwzRpr2hq e48c9721-51dc-4aab-bed5-9fca13583f6d
+a=ssrc:308240014 mslabel:QTmfFx9DVWRWWGZcKdFUIWEWpcgSwzRpr2hq
+a=ssrc:308240014 label:e48c9721-51dc-4aab-bed5-9fca13583f6d
+m=audio 9 UDP/TLS/RTP/SAVPF 111
+c=IN IP4 0.0.0.0
+a=rtcp:9 IN IP4 0.0.0.0
+a=ice-ufrag:BM2X
+a=ice-pwd:Vuhxchh+x99a/8vCJ+zvTF5P
+a=ice-options:trickle
+a=fingerprint:sha-256 93:2B:9C:F2:AD:0D:53:9B:4A:12:05:F9:00:94:7F:9F:2F:CA:86:A6:F3:7F:C0:BC:C8:4D:3D:73:05:B8:5D:43
+a=setup:active
+a=mid:1
+a=sendonly
+a=msid:QTmfFx9DVWRWWGZcKdFUIWEWpcgSwzRpr2hq 1fdaff96-7bfc-4caf-8cb9-56c74f68805a
+a=rtcp-mux
+a=rtpmap:111 opus/48000/2
+a=fmtp:111 minptime=10;useinbandfec=1
+a=ssrc:295927579 cname:zOlMYHemYXfOHyTR
+a=ssrc:295927579 msid:QTmfFx9DVWRWWGZcKdFUIWEWpcgSwzRpr2hq 1fdaff96-7bfc-4caf-8cb9-56c74f68805a
+a=ssrc:295927579 mslabel:QTmfFx9DVWRWWGZcKdFUIWEWpcgSwzRpr2hq
+a=ssrc:295927579 label:1fdaff96-7bfc-4caf-8cb9-56c74f68805a
+m=application 9 DTLS/SCTP 5000
+c=IN IP4 0.0.0.0
+a=ice-ufrag:BM2X
+a=ice-pwd:Vuhxchh+x99a/8vCJ+zvTF5P
+a=ice-options:trickle
+a=fingerprint:sha-256 93:2B:9C:F2:AD:0D:53:9B:4A:12:05:F9:00:94:7F:9F:2F:CA:86:A6:F3:7F:C0:BC:C8:4D:3D:73:05:B8:5D:43
+a=setup:active
+a=mid:2
+a=sctpmap:5000 webrtc-datachannel 1024
+
+2021-02-18T16:27:01.114356+07:00 [   pion:pc:info] signaling state changed to stable
+2021-02-18T16:27:01.114490+07:00 [     negotiator] [Inrz9icu9QFD78qchN77i3] Signaling state change: stable
+2021-02-18T16:27:01.129879+07:00 [  pion:pc:debug] got new track: &{mu:{w:{state:0 sema:0} writerSem:0 readerSem:0 readerCount:0 readerWait:0} id:1fdaff96-7bfc-4caf-8cb9-56c74f68805a payloadType:111 kind:1 label:QTmfFx9DVWRWWGZcKdFUIWEWpcgSwzRpr2hq ssrc:295927579 codec:0xc000207420 rid: packetizer:<nil> receiver:0xc0002324e0 activeSenders:[] totalSenderCount:0}
+2021-02-18T16:27:01.130030+07:00 [webrtctransport] [Inrz9icu9QFD78qchN77i3] Remote track: 295927579
+2021-02-18T16:27:01.145920+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16551
+	Timestamp: 3148838011
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 74
+
+2021-02-18T16:27:01.161001+07:00 [  pion:pc:debug] got new track: &{mu:{w:{state:0 sema:0} writerSem:0 readerSem:0 readerCount:0 readerWait:0} id:e48c9721-51dc-4aab-bed5-9fca13583f6d payloadType:96 kind:2 label:QTmfFx9DVWRWWGZcKdFUIWEWpcgSwzRpr2hq ssrc:308240014 codec:0xc000207490 rid: packetizer:<nil> receiver:0xc000232480 activeSenders:[] totalSenderCount:0}
+2021-02-18T16:27:01.161130+07:00 [webrtctransport] [Inrz9icu9QFD78qchN77i3] Remote track: 308240014
+2021-02-18T16:27:01.170183+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16552
+	Timestamp: 3148838971
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 67
+
+2021-02-18T16:27:01.170327+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7548
+	Timestamp: 3794821385
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 985
+
+2021-02-18T16:27:01.179786+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7549
+	Timestamp: 3794821385
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 985
+
+2021-02-18T16:27:01.187874+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16553
+	Timestamp: 3148839931
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 74
+
+2021-02-18T16:27:01.188035+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7550
+	Timestamp: 3794824625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 711
+
+2021-02-18T16:27:01.205116+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16554
+	Timestamp: 3148840891
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 72
+
+2021-02-18T16:27:01.215428+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7551
+	Timestamp: 3794827505
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 481
+
+2021-02-18T16:27:01.226013+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16555
+	Timestamp: 3148841851
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 64
+
+2021-02-18T16:27:01.230008+07:00 [ pion:ice:trace] inbound STUN (Request) from 172.25.84.124:50265 to udp4 host 172.25.84.124:9001
+2021-02-18T16:27:01.246355+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7552
+	Timestamp: 3794830385
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 642
+
+2021-02-18T16:27:01.246475+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16556
+	Timestamp: 3148842811
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 69
+
+2021-02-18T16:27:01.252632+07:00 [ pion:ice:trace] checking keepalive
+2021-02-18T16:27:01.267094+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16557
+	Timestamp: 3148843771
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 65
+
+2021-02-18T16:27:01.274601+07:00 [pion:sctp:trace] [0xc0004fc000] ack timed out (ackState: 2)
+2021-02-18T16:27:01.274731+07:00 [pion:sctp:debug] [0xc0004fc000] sending SACK: SACK cumTsnAck=1834180378 arwnd=1048576 dupTsn=[]
+2021-02-18T16:27:01.282466+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7553
+	Timestamp: 3794833625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 568
+
+2021-02-18T16:27:01.287663+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16558
+	Timestamp: 3148844731
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 70
+
+2021-02-18T16:27:01.308221+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16559
+	Timestamp: 3148845691
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 71
+
+2021-02-18T16:27:01.314356+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7554
+	Timestamp: 3794836505
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 567
+
+2021-02-18T16:27:01.323935+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16560
+	Timestamp: 3148846651
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 71
+
+2021-02-18T16:27:01.344882+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7555
+	Timestamp: 3794839385
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 561
+
+2021-02-18T16:27:01.349772+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16561
+	Timestamp: 3148847611
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 62
+
+2021-02-18T16:27:01.365042+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16562
+	Timestamp: 3148848571
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 68
+
+2021-02-18T16:27:01.380382+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7556
+	Timestamp: 3794842625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 518
+
+2021-02-18T16:27:01.385668+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16563
+	Timestamp: 3148849531
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 73
+
+2021-02-18T16:27:01.406082+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16564
+	Timestamp: 3148850491
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 67
+
+2021-02-18T16:27:01.416212+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7557
+	Timestamp: 3794845505
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 631
+
+2021-02-18T16:27:01.427374+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16565
+	Timestamp: 3148851451
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 69
+
+2021-02-18T16:27:01.447103+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7558
+	Timestamp: 3794848385
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 556
+
+2021-02-18T16:27:01.447174+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16566
+	Timestamp: 3148852411
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 66
+
+2021-02-18T16:27:01.462477+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16567
+	Timestamp: 3148853371
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 66
+
+2021-02-18T16:27:01.482881+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7559
+	Timestamp: 3794851625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 426
+
+2021-02-18T16:27:01.488021+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16568
+	Timestamp: 3148854331
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 65
+
+2021-02-18T16:27:01.508790+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16569
+	Timestamp: 3148855291
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 69
+
+2021-02-18T16:27:01.513738+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7560
+	Timestamp: 3794854505
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 479
+
+2021-02-18T16:27:01.529641+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16570
+	Timestamp: 3148856251
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 71
+
+2021-02-18T16:27:01.545056+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7561
+	Timestamp: 3794857385
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 544
+
+2021-02-18T16:27:01.550136+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16571
+	Timestamp: 3148857211
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 68
+
+2021-02-18T16:27:01.565981+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16572
+	Timestamp: 3148858171
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 66
+
+2021-02-18T16:27:01.580986+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7562
+	Timestamp: 3794860625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 598
+
+2021-02-18T16:27:01.586233+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16573
+	Timestamp: 3148859131
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 71
+
+2021-02-18T16:27:01.606653+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16574
+	Timestamp: 3148860091
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 71
+
+2021-02-18T16:27:01.611831+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7563
+	Timestamp: 3794863505
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 632
+
+2021-02-18T16:27:01.627229+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16575
+	Timestamp: 3148861051
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 72
+
+2021-02-18T16:27:01.642584+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7564
+	Timestamp: 3794866385
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 593
+
+2021-02-18T16:27:01.648604+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16576
+	Timestamp: 3148862011
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 76
+
+2021-02-18T16:27:01.668508+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16577
+	Timestamp: 3148862971
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 76
+
+2021-02-18T16:27:01.684022+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7565
+	Timestamp: 3794869625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 613
+
+2021-02-18T16:27:01.689301+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16578
+	Timestamp: 3148863931
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 71
+
+2021-02-18T16:27:01.709604+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16579
+	Timestamp: 3148864891
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 66
+
+2021-02-18T16:27:01.715127+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7566
+	Timestamp: 3794872505
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 475
+
+2021-02-18T16:27:01.730351+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16580
+	Timestamp: 3148865851
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 73
+
+2021-02-18T16:27:01.746954+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16581
+	Timestamp: 3148866811
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 68
+
+2021-02-18T16:27:01.751347+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7567
+	Timestamp: 3794875745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 504
+
+2021-02-18T16:27:01.766633+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16582
+	Timestamp: 3148867771
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 69
+
+2021-02-18T16:27:01.782292+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7568
+	Timestamp: 3794878625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 343
+
+2021-02-18T16:27:01.787370+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16583
+	Timestamp: 3148868731
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 69
+
+2021-02-18T16:27:01.802641+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16584
+	Timestamp: 3148869691
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 65
+
+2021-02-18T16:27:01.812907+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7569
+	Timestamp: 3794881505
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 327
+
+2021-02-18T16:27:01.828853+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16585
+	Timestamp: 3148870651
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 74
+
+2021-02-18T16:27:01.848738+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7570
+	Timestamp: 3794884745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 336
+
+2021-02-18T16:27:01.848813+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16586
+	Timestamp: 3148871611
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 64
+
+2021-02-18T16:27:01.869318+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16587
+	Timestamp: 3148872571
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 71
+
+2021-02-18T16:27:01.879672+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7571
+	Timestamp: 3794887625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 348
+
+2021-02-18T16:27:01.884823+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16588
+	Timestamp: 3148873531
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 66
+
+2021-02-18T16:27:01.905503+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16589
+	Timestamp: 3148874491
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 66
+
+2021-02-18T16:27:01.910814+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7572
+	Timestamp: 3794890505
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 444
+
+2021-02-18T16:27:01.926443+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16590
+	Timestamp: 3148875451
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 64
+
+2021-02-18T16:27:01.946427+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16591
+	Timestamp: 3148876411
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 71
+
+2021-02-18T16:27:01.952451+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7573
+	Timestamp: 3794893745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 380
+
+2021-02-18T16:27:01.967727+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16592
+	Timestamp: 3148877371
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 64
+
+2021-02-18T16:27:01.982545+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7574
+	Timestamp: 3794896625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 520
+
+2021-02-18T16:27:01.987736+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16593
+	Timestamp: 3148878331
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 62
+
+2021-02-18T16:27:02.008352+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16594
+	Timestamp: 3148879291
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 68
+
+2021-02-18T16:27:02.013483+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7575
+	Timestamp: 3794899505
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 391
+
+2021-02-18T16:27:02.028960+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16595
+	Timestamp: 3148880251
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 70
+
+2021-02-18T16:27:02.044292+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16596
+	Timestamp: 3148881211
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 78
+
+2021-02-18T16:27:02.049710+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7576
+	Timestamp: 3794902745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 346
+
+2021-02-18T16:27:02.064861+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16597
+	Timestamp: 3148882171
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 66
+
+2021-02-18T16:27:02.080175+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7577
+	Timestamp: 3794905625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 518
+
+2021-02-18T16:27:02.085288+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16598
+	Timestamp: 3148883131
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 72
+
+2021-02-18T16:27:02.111331+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16599
+	Timestamp: 3148884091
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 71
+
+2021-02-18T16:27:02.116036+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7578
+	Timestamp: 3794908505
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 440
+
+2021-02-18T16:27:02.126221+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16600
+	Timestamp: 3148885051
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 71
+
+2021-02-18T16:27:02.146756+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16601
+	Timestamp: 3148886011
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 71
+
+2021-02-18T16:27:02.152038+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7579
+	Timestamp: 3794911745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 833
+
+2021-02-18T16:27:02.157148+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7580
+	Timestamp: 3794911745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 833
+
+2021-02-18T16:27:02.167905+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7581
+	Timestamp: 3794911745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 834
+
+2021-02-18T16:27:02.168001+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16602
+	Timestamp: 3148886971
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 72
+
+2021-02-18T16:27:02.183132+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7582
+	Timestamp: 3794914625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 691
+
+2021-02-18T16:27:02.188263+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16603
+	Timestamp: 3148887931
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 73
+
+2021-02-18T16:27:02.209656+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16604
+	Timestamp: 3148888891
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 73
+
+2021-02-18T16:27:02.215250+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7583
+	Timestamp: 3794917505
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1002
+
+2021-02-18T16:27:02.230295+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16605
+	Timestamp: 3148889851
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 67
+
+2021-02-18T16:27:02.230439+07:00 [ pion:ice:trace] inbound STUN (Request) from 172.25.84.124:50265 to udp4 host 172.25.84.124:9001
+2021-02-18T16:27:02.250901+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7584
+	Timestamp: 3794920745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1021
+
+2021-02-18T16:27:02.250985+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16606
+	Timestamp: 3148890811
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 59
+
+2021-02-18T16:27:02.266310+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16607
+	Timestamp: 3148891771
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 66
+
+2021-02-18T16:27:02.281571+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7585
+	Timestamp: 3794923625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 834
+
+2021-02-18T16:27:02.286860+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16608
+	Timestamp: 3148892731
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 67
+
+2021-02-18T16:27:02.307521+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16609
+	Timestamp: 3148893691
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 65
+
+2021-02-18T16:27:02.312510+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7586
+	Timestamp: 3794926505
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 988
+
+2021-02-18T16:27:02.328880+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16610
+	Timestamp: 3148894651
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 66
+
+2021-02-18T16:27:02.348774+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16611
+	Timestamp: 3148895611
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 71
+
+2021-02-18T16:27:02.348875+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7587
+	Timestamp: 3794929745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 943
+
+2021-02-18T16:27:02.369426+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16612
+	Timestamp: 3148896571
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 76
+
+2021-02-18T16:27:02.379951+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7588
+	Timestamp: 3794932625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 808
+
+2021-02-18T16:27:02.384996+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16613
+	Timestamp: 3148897531
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 66
+
+2021-02-18T16:27:02.405304+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16614
+	Timestamp: 3148898491
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 66
+
+2021-02-18T16:27:02.410469+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7589
+	Timestamp: 3794935505
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 690
+
+2021-02-18T16:27:02.416160+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7590
+	Timestamp: 3794935505
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 691
+
+2021-02-18T16:27:02.426085+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16615
+	Timestamp: 3148899451
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 70
+
+2021-02-18T16:27:02.446596+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16616
+	Timestamp: 3148900411
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 67
+
+2021-02-18T16:27:02.452046+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7591
+	Timestamp: 3794938745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 952
+
+2021-02-18T16:27:02.472407+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16617
+	Timestamp: 3148901371
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 76
+
+2021-02-18T16:27:02.482563+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7592
+	Timestamp: 3794941625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1053
+
+2021-02-18T16:27:02.488051+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16618
+	Timestamp: 3148902331
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 76
+
+2021-02-18T16:27:02.508994+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16619
+	Timestamp: 3148903291
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 68
+
+2021-02-18T16:27:02.513670+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7593
+	Timestamp: 3794944505
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 896
+
+2021-02-18T16:27:02.529096+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16620
+	Timestamp: 3148904251
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 65
+
+2021-02-18T16:27:02.544913+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16621
+	Timestamp: 3148905211
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 68
+
+2021-02-18T16:27:02.549629+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7594
+	Timestamp: 3794947745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1092
+
+2021-02-18T16:27:02.565663+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16622
+	Timestamp: 3148906171
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 73
+
+2021-02-18T16:27:02.580465+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7595
+	Timestamp: 3794950625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 774
+
+2021-02-18T16:27:02.590781+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16623
+	Timestamp: 3148907131
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 67
+
+2021-02-18T16:27:02.611388+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16624
+	Timestamp: 3148908091
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 74
+
+2021-02-18T16:27:02.616531+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7596
+	Timestamp: 3794953505
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1056
+
+2021-02-18T16:27:02.626783+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16625
+	Timestamp: 3148909051
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 72
+
+2021-02-18T16:27:02.647260+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7597
+	Timestamp: 3794956745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1082
+
+2021-02-18T16:27:02.647354+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16626
+	Timestamp: 3148910011
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 65
+
+2021-02-18T16:27:02.666592+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16627
+	Timestamp: 3148910971
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 71
+
+2021-02-18T16:27:02.682122+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7598
+	Timestamp: 3794959625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1041
+
+2021-02-18T16:27:02.692336+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16628
+	Timestamp: 3148911931
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 68
+
+2021-02-18T16:27:02.708272+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16629
+	Timestamp: 3148912891
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 68
+
+2021-02-18T16:27:02.712995+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7599
+	Timestamp: 3794962505
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 643
+
+2021-02-18T16:27:02.718740+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7600
+	Timestamp: 3794962505
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 644
+
+2021-02-18T16:27:02.728672+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16630
+	Timestamp: 3148913851
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 66
+
+2021-02-18T16:27:02.749113+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7601
+	Timestamp: 3794965745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1070
+
+2021-02-18T16:27:02.749199+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16631
+	Timestamp: 3148914811
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 74
+
+2021-02-18T16:27:02.769438+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16632
+	Timestamp: 3148915771
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 74
+
+2021-02-18T16:27:02.785003+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16633
+	Timestamp: 3148916731
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 67
+
+2021-02-18T16:27:02.785110+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7602
+	Timestamp: 3794968625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1098
+
+2021-02-18T16:27:02.805651+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16634
+	Timestamp: 3148917691
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 64
+
+2021-02-18T16:27:02.815754+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7603
+	Timestamp: 3794971505
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 672
+
+2021-02-18T16:27:02.821202+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7604
+	Timestamp: 3794971505
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 672
+
+2021-02-18T16:27:02.826161+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16635
+	Timestamp: 3148918651
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 64
+
+2021-02-18T16:27:02.846538+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7605
+	Timestamp: 3794974745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1114
+
+2021-02-18T16:27:02.846605+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16636
+	Timestamp: 3148919611
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 69
+
+2021-02-18T16:27:02.867611+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16637
+	Timestamp: 3148920571
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 69
+
+2021-02-18T16:27:02.882495+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7606
+	Timestamp: 3794977625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 750
+
+2021-02-18T16:27:02.887619+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7607
+	Timestamp: 3794977625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 751
+
+2021-02-18T16:27:02.887720+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16638
+	Timestamp: 3148921531
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 73
+
+2021-02-18T16:27:02.908561+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16639
+	Timestamp: 3148922491
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 62
+
+2021-02-18T16:27:02.913303+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7608
+	Timestamp: 3794980505
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1096
+
+2021-02-18T16:27:02.928562+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16640
+	Timestamp: 3148923451
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 68
+
+2021-02-18T16:27:02.949124+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16641
+	Timestamp: 3148924411
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 64
+
+2021-02-18T16:27:02.949224+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7609
+	Timestamp: 3794983745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1020
+
+2021-02-18T16:27:02.969454+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16642
+	Timestamp: 3148925371
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 72
+
+2021-02-18T16:27:02.980041+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7610
+	Timestamp: 3794986625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1070
+
+2021-02-18T16:27:02.984866+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16643
+	Timestamp: 3148926331
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 65
+
+2021-02-18T16:27:03.005426+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16644
+	Timestamp: 3148927291
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 72
+
+2021-02-18T16:27:03.016144+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7611
+	Timestamp: 3794989505
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1147
+
+2021-02-18T16:27:03.026226+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16645
+	Timestamp: 3148928251
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 70
+
+2021-02-18T16:27:03.047149+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16646
+	Timestamp: 3148929211
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 75
+
+2021-02-18T16:27:03.052103+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7612
+	Timestamp: 3794992745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 642
+
+2021-02-18T16:27:03.057341+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7613
+	Timestamp: 3794992745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 642
+
+2021-02-18T16:27:03.067544+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16647
+	Timestamp: 3148930171
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 70
+
+2021-02-18T16:27:03.083043+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7614
+	Timestamp: 3794995625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 646
+
+2021-02-18T16:27:03.088550+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7615
+	Timestamp: 3794995625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 646
+
+2021-02-18T16:27:03.088697+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16648
+	Timestamp: 3148931131
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 69
+
+2021-02-18T16:27:03.109126+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16649
+	Timestamp: 3148932091
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 67
+
+2021-02-18T16:27:03.115264+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7616
+	Timestamp: 3794998505
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1001
+
+2021-02-18T16:27:03.129785+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16650
+	Timestamp: 3148933051
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 65
+
+2021-02-18T16:27:03.150179+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16651
+	Timestamp: 3148934011
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 66
+
+2021-02-18T16:27:03.150297+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7617
+	Timestamp: 3795001745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 598
+
+2021-02-18T16:27:03.155562+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7618
+	Timestamp: 3795001745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 598
+
+2021-02-18T16:27:03.165719+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16652
+	Timestamp: 3148934971
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 64
+
+2021-02-18T16:27:03.181019+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7619
+	Timestamp: 3795004625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 983
+
+2021-02-18T16:27:03.186118+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16653
+	Timestamp: 3148935931
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 64
+
+2021-02-18T16:27:03.207211+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16654
+	Timestamp: 3148936891
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 73
+
+2021-02-18T16:27:03.217124+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7620
+	Timestamp: 3795007505
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1139
+
+2021-02-18T16:27:03.227511+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16655
+	Timestamp: 3148937851
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 65
+
+2021-02-18T16:27:03.247759+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16656
+	Timestamp: 3148938811
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 70
+
+2021-02-18T16:27:03.247856+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7621
+	Timestamp: 3795010745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 653
+
+2021-02-18T16:27:03.252853+07:00 [ pion:ice:trace] checking keepalive
+2021-02-18T16:27:03.253127+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7622
+	Timestamp: 3795010745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 654
+
+2021-02-18T16:27:03.263278+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16657
+	Timestamp: 3148939771
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 71
+
+2021-02-18T16:27:03.283853+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7623
+	Timestamp: 3795013625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 639
+
+2021-02-18T16:27:03.283932+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16658
+	Timestamp: 3148940731
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 69
+
+2021-02-18T16:27:03.289562+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7624
+	Timestamp: 3795013625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 640
+
+2021-02-18T16:27:03.304520+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16659
+	Timestamp: 3148941691
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 69
+
+2021-02-18T16:27:03.314725+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7625
+	Timestamp: 3795016865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1174
+
+2021-02-18T16:27:03.325025+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16660
+	Timestamp: 3148942651
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 68
+
+2021-02-18T16:27:03.350579+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7626
+	Timestamp: 3795019745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1062
+
+2021-02-18T16:27:03.350710+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16661
+	Timestamp: 3148943611
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 75
+
+2021-02-18T16:27:03.365946+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16662
+	Timestamp: 3148944571
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 70
+
+2021-02-18T16:27:03.381301+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7627
+	Timestamp: 3795022625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 987
+
+2021-02-18T16:27:03.386434+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16663
+	Timestamp: 3148945531
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 65
+
+2021-02-18T16:27:03.407658+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16664
+	Timestamp: 3148946491
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 67
+
+2021-02-18T16:27:03.417579+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7628
+	Timestamp: 3795025865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 700
+
+2021-02-18T16:27:03.422826+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7629
+	Timestamp: 3795025865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 701
+
+2021-02-18T16:27:03.428171+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16665
+	Timestamp: 3148947451
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 69
+
+2021-02-18T16:27:03.448649+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7630
+	Timestamp: 3795028745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 608
+
+2021-02-18T16:27:03.448731+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16666
+	Timestamp: 3148948411
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 69
+
+2021-02-18T16:27:03.453808+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7631
+	Timestamp: 3795028745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 608
+
+2021-02-18T16:27:03.464133+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16667
+	Timestamp: 3148949371
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 66
+
+2021-02-18T16:27:03.484662+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7632
+	Timestamp: 3795031625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 605
+
+2021-02-18T16:27:03.490020+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16668
+	Timestamp: 3148950331
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 65
+
+2021-02-18T16:27:03.490155+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7633
+	Timestamp: 3795031625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 605
+
+2021-02-18T16:27:03.510449+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16669
+	Timestamp: 3148951291
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 71
+
+2021-02-18T16:27:03.515846+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7634
+	Timestamp: 3795034865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 683
+
+2021-02-18T16:27:03.521127+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7635
+	Timestamp: 3795034865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 684
+
+2021-02-18T16:27:03.526302+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16670
+	Timestamp: 3148952251
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 65
+
+2021-02-18T16:27:03.546731+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16671
+	Timestamp: 3148953211
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 65
+
+2021-02-18T16:27:03.551862+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7636
+	Timestamp: 3795037745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 613
+
+2021-02-18T16:27:03.557284+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7637
+	Timestamp: 3795037745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 613
+
+2021-02-18T16:27:03.567414+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16672
+	Timestamp: 3148954171
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 66
+
+2021-02-18T16:27:03.582867+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7638
+	Timestamp: 3795040625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 675
+
+2021-02-18T16:27:03.587948+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16673
+	Timestamp: 3148955131
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 67
+
+2021-02-18T16:27:03.588104+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7639
+	Timestamp: 3795040625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 676
+
+2021-02-18T16:27:03.608439+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16674
+	Timestamp: 3148956091
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 63
+
+2021-02-18T16:27:03.618780+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7640
+	Timestamp: 3795043865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1089
+
+2021-02-18T16:27:03.624792+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16675
+	Timestamp: 3148957051
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 69
+
+2021-02-18T16:27:03.644661+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16676
+	Timestamp: 3148958011
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 84
+
+2021-02-18T16:27:03.649742+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7641
+	Timestamp: 3795046745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1019
+
+2021-02-18T16:27:03.665147+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16677
+	Timestamp: 3148958971
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 76
+
+2021-02-18T16:27:03.680705+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7642
+	Timestamp: 3795049625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1126
+
+2021-02-18T16:27:03.691122+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16678
+	Timestamp: 3148959931
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 71
+
+2021-02-18T16:27:03.707014+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16679
+	Timestamp: 3148960891
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 67
+
+2021-02-18T16:27:03.722104+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7643
+	Timestamp: 3795052865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1105
+
+2021-02-18T16:27:03.727672+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16680
+	Timestamp: 3148961851
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 65
+
+2021-02-18T16:27:03.747826+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7644
+	Timestamp: 3795055745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 659
+
+2021-02-18T16:27:03.747900+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16681
+	Timestamp: 3148962811
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 66
+
+2021-02-18T16:27:03.753254+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7645
+	Timestamp: 3795055745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 660
+
+2021-02-18T16:27:03.768349+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16682
+	Timestamp: 3148963771
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 62
+
+2021-02-18T16:27:03.783721+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7646
+	Timestamp: 3795058625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1102
+
+2021-02-18T16:27:03.788840+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16683
+	Timestamp: 3148964731
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 64
+
+2021-02-18T16:27:03.804326+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16684
+	Timestamp: 3148965691
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 61
+
+2021-02-18T16:27:03.814412+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7647
+	Timestamp: 3795061865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 737
+
+2021-02-18T16:27:03.819583+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7648
+	Timestamp: 3795061865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 737
+
+2021-02-18T16:27:03.824757+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16685
+	Timestamp: 3148966651
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 68
+
+2021-02-18T16:27:03.845242+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16686
+	Timestamp: 3148967611
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 73
+
+2021-02-18T16:27:03.850536+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7649
+	Timestamp: 3795064745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1171
+
+2021-02-18T16:27:03.870954+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16687
+	Timestamp: 3148968571
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 68
+
+2021-02-18T16:27:03.881622+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7650
+	Timestamp: 3795067625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1142
+
+2021-02-18T16:27:03.886592+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16688
+	Timestamp: 3148969531
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 69
+
+2021-02-18T16:27:03.907055+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16689
+	Timestamp: 3148970491
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 70
+
+2021-02-18T16:27:03.917421+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7651
+	Timestamp: 3795070865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 658
+
+2021-02-18T16:27:03.922710+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7652
+	Timestamp: 3795070865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 658
+
+2021-02-18T16:27:03.927875+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16690
+	Timestamp: 3148971451
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 67
+
+2021-02-18T16:27:03.948291+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7653
+	Timestamp: 3795073745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1079
+
+2021-02-18T16:27:03.948382+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16691
+	Timestamp: 3148972411
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 65
+
+2021-02-18T16:27:03.968775+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16692
+	Timestamp: 3148973371
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 62
+
+2021-02-18T16:27:03.984178+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16693
+	Timestamp: 3148974331
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 66
+
+2021-02-18T16:27:03.984283+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7654
+	Timestamp: 3795076625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 677
+
+2021-02-18T16:27:03.989379+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7655
+	Timestamp: 3795076625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 677
+
+2021-02-18T16:27:04.004751+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16694
+	Timestamp: 3148975291
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 66
+
+2021-02-18T16:27:04.015435+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7656
+	Timestamp: 3795079865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1076
+
+2021-02-18T16:27:04.025678+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16695
+	Timestamp: 3148976251
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 65
+
+2021-02-18T16:27:04.051106+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7657
+	Timestamp: 3795082745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1169
+
+2021-02-18T16:27:04.051174+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16696
+	Timestamp: 3148977211
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 72
+
+2021-02-18T16:27:04.066460+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16697
+	Timestamp: 3148978171
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 73
+
+2021-02-18T16:27:04.081844+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7658
+	Timestamp: 3795085625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1082
+
+2021-02-18T16:27:04.087276+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16698
+	Timestamp: 3148979131
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 65
+
+2021-02-18T16:27:04.107532+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16699
+	Timestamp: 3148980091
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 67
+
+2021-02-18T16:27:04.117884+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7659
+	Timestamp: 3795088865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 712
+
+2021-02-18T16:27:04.123026+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7660
+	Timestamp: 3795088865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 712
+
+2021-02-18T16:27:04.128111+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16700
+	Timestamp: 3148981051
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 69
+
+2021-02-18T16:27:04.148598+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7661
+	Timestamp: 3795091745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 622
+
+2021-02-18T16:27:04.148683+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16701
+	Timestamp: 3148982011
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 94
+
+2021-02-18T16:27:04.153805+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7662
+	Timestamp: 3795091745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 622
+
+2021-02-18T16:27:04.169165+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16702
+	Timestamp: 3148982971
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 82
+
+2021-02-18T16:27:04.184558+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16703
+	Timestamp: 3148983931
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 77
+
+2021-02-18T16:27:04.184658+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7663
+	Timestamp: 3795094625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1154
+
+2021-02-18T16:27:04.204918+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16704
+	Timestamp: 3148984891
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 79
+
+2021-02-18T16:27:04.215539+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7664
+	Timestamp: 3795097865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 790
+
+2021-02-18T16:27:04.219508+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7665
+	Timestamp: 3795097865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 791
+
+2021-02-18T16:27:04.229825+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16705
+	Timestamp: 3148985851
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 79
+
+2021-02-18T16:27:04.250401+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16706
+	Timestamp: 3148986811
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 75
+
+2021-02-18T16:27:04.250597+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7666
+	Timestamp: 3795100745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 734
+
+2021-02-18T16:27:04.255522+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7667
+	Timestamp: 3795100745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 735
+
+2021-02-18T16:27:04.266100+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16707
+	Timestamp: 3148987771
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 75
+
+2021-02-18T16:27:04.281253+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7668
+	Timestamp: 3795103625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1136
+
+2021-02-18T16:27:04.286504+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16708
+	Timestamp: 3148988731
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 79
+
+2021-02-18T16:27:04.306908+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16709
+	Timestamp: 3148989691
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 81
+
+2021-02-18T16:27:04.317155+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7669
+	Timestamp: 3795106865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1118
+
+2021-02-18T16:27:04.327654+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16710
+	Timestamp: 3148990651
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 76
+
+2021-02-18T16:27:04.348082+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7670
+	Timestamp: 3795109745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 642
+
+2021-02-18T16:27:04.348183+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16711
+	Timestamp: 3148991611
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 80
+
+2021-02-18T16:27:04.353203+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7671
+	Timestamp: 3795109745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 643
+
+2021-02-18T16:27:04.368542+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16712
+	Timestamp: 3148992571
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 75
+
+2021-02-18T16:27:04.384532+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7672
+	Timestamp: 3795112625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1170
+
+2021-02-18T16:27:04.384818+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16713
+	Timestamp: 3148993531
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 76
+
+2021-02-18T16:27:04.404590+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16714
+	Timestamp: 3148994491
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 76
+
+2021-02-18T16:27:04.414679+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7673
+	Timestamp: 3795115865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 627
+
+2021-02-18T16:27:04.419853+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7674
+	Timestamp: 3795115865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 628
+
+2021-02-18T16:27:04.425042+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16715
+	Timestamp: 3148995451
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 72
+
+2021-02-18T16:27:04.445571+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16716
+	Timestamp: 3148996411
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 77
+
+2021-02-18T16:27:04.451024+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7675
+	Timestamp: 3795118745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 670
+
+2021-02-18T16:27:04.456292+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7676
+	Timestamp: 3795118745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 670
+
+2021-02-18T16:27:04.471507+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16717
+	Timestamp: 3148997371
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 72
+
+2021-02-18T16:27:04.481736+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7677
+	Timestamp: 3795121625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 622
+
+2021-02-18T16:27:04.486866+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7678
+	Timestamp: 3795121625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 622
+
+2021-02-18T16:27:04.486962+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16718
+	Timestamp: 3148998331
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 69
+
+2021-02-18T16:27:04.507261+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16719
+	Timestamp: 3148999291
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 71
+
+2021-02-18T16:27:04.517640+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7679
+	Timestamp: 3795124865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 615
+
+2021-02-18T16:27:04.522709+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7680
+	Timestamp: 3795124865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 616
+
+2021-02-18T16:27:04.527826+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16720
+	Timestamp: 3149000251
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 67
+
+2021-02-18T16:27:04.548313+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7681
+	Timestamp: 3795127745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 725
+
+2021-02-18T16:27:04.548398+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16721
+	Timestamp: 3149001211
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 70
+
+2021-02-18T16:27:04.553421+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7682
+	Timestamp: 3795127745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 726
+
+2021-02-18T16:27:04.569079+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16722
+	Timestamp: 3149002171
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 76
+
+2021-02-18T16:27:04.584360+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7683
+	Timestamp: 3795130625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1032
+
+2021-02-18T16:27:04.584459+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16723
+	Timestamp: 3149003131
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 77
+
+2021-02-18T16:27:04.604958+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16724
+	Timestamp: 3149004091
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 77
+
+2021-02-18T16:27:04.615216+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7684
+	Timestamp: 3795133865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1044
+
+2021-02-18T16:27:04.625850+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16725
+	Timestamp: 3149005051
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 69
+
+2021-02-18T16:27:04.646070+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16726
+	Timestamp: 3149006011
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 65
+
+2021-02-18T16:27:04.651222+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7685
+	Timestamp: 3795136745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1119
+
+2021-02-18T16:27:04.666748+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16727
+	Timestamp: 3149006971
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 70
+
+2021-02-18T16:27:04.682103+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7686
+	Timestamp: 3795139625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 622
+
+2021-02-18T16:27:04.687146+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16728
+	Timestamp: 3149007931
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 67
+
+2021-02-18T16:27:04.687265+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7687
+	Timestamp: 3795139625
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 622
+
+2021-02-18T16:27:04.707941+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16729
+	Timestamp: 3149008891
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 65
+
+2021-02-18T16:27:04.718141+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7688
+	Timestamp: 3795142865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1188
+
+2021-02-18T16:27:04.729454+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16730
+	Timestamp: 3149009851
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 71
+
+2021-02-18T16:27:04.731646+07:00 [ pion:ice:trace] inbound STUN (Request) from 172.25.84.124:50265 to udp4 host 172.25.84.124:9001
+2021-02-18T16:27:04.749092+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16731
+	Timestamp: 3149010811
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 71
+
+2021-02-18T16:27:04.754179+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7689
+	Timestamp: 3795145745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 732
+
+2021-02-18T16:27:04.759526+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7690
+	Timestamp: 3795145745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 732
+
+2021-02-18T16:27:04.769669+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16732
+	Timestamp: 3149011771
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 64
+
+2021-02-18T16:27:04.785018+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7691
+	Timestamp: 3795148985
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1036
+
+2021-02-18T16:27:04.790217+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16733
+	Timestamp: 3149012731
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 69
+
+2021-02-18T16:27:04.805458+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16734
+	Timestamp: 3149013691
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 70
+
+2021-02-18T16:27:04.815704+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7692
+	Timestamp: 3795151865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 800
+
+2021-02-18T16:27:04.820858+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7693
+	Timestamp: 3795151865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 800
+
+2021-02-18T16:27:04.826020+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16735
+	Timestamp: 3149014651
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 65
+
+2021-02-18T16:27:04.846548+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16736
+	Timestamp: 3149015611
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 67
+
+2021-02-18T16:27:04.852070+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7694
+	Timestamp: 3795154745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 606
+
+2021-02-18T16:27:04.857243+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7695
+	Timestamp: 3795154745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 606
+
+2021-02-18T16:27:04.867401+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16737
+	Timestamp: 3149016571
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 64
+
+2021-02-18T16:27:04.887971+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7696
+	Timestamp: 3795157985
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1131
+
+2021-02-18T16:27:04.888134+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16738
+	Timestamp: 3149017531
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 67
+
+2021-02-18T16:27:04.908403+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16739
+	Timestamp: 3149018491
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 66
+
+2021-02-18T16:27:04.918510+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7697
+	Timestamp: 3795160865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 731
+
+2021-02-18T16:27:04.923736+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7698
+	Timestamp: 3795160865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 731
+
+2021-02-18T16:27:04.928846+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16740
+	Timestamp: 3149019451
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 68
+
+2021-02-18T16:27:04.949656+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16741
+	Timestamp: 3149020411
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 64
+
+2021-02-18T16:27:04.949898+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7699
+	Timestamp: 3795163745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 635
+
+2021-02-18T16:27:04.954916+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7700
+	Timestamp: 3795163745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 635
+
+2021-02-18T16:27:04.965093+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16742
+	Timestamp: 3149021371
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 68
+
+2021-02-18T16:27:04.985540+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7701
+	Timestamp: 3795166985
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 625
+
+2021-02-18T16:27:04.985613+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16743
+	Timestamp: 3149022331
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 67
+
+2021-02-18T16:27:04.991052+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7702
+	Timestamp: 3795166985
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 625
+
+2021-02-18T16:27:05.006307+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16744
+	Timestamp: 3149023291
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 74
+
+2021-02-18T16:27:05.016371+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7703
+	Timestamp: 3795169865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 611
+
+2021-02-18T16:27:05.021538+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7704
+	Timestamp: 3795169865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 611
+
+2021-02-18T16:27:05.026723+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16745
+	Timestamp: 3149024251
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 72
+
+2021-02-18T16:27:05.047203+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7705
+	Timestamp: 3795172745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1131
+
+2021-02-18T16:27:05.047276+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16746
+	Timestamp: 3149025211
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 72
+
+2021-02-18T16:27:05.068354+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16747
+	Timestamp: 3149026171
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 72
+
+2021-02-18T16:27:05.088404+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7706
+	Timestamp: 3795175985
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1040
+
+2021-02-18T16:27:05.088492+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16748
+	Timestamp: 3149027131
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 65
+
+2021-02-18T16:27:05.109477+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16749
+	Timestamp: 3149028091
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 65
+
+2021-02-18T16:27:05.119361+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7707
+	Timestamp: 3795178865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 689
+
+2021-02-18T16:27:05.124489+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16750
+	Timestamp: 3149029051
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 68
+
+2021-02-18T16:27:05.124597+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7708
+	Timestamp: 3795178865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 689
+
+2021-02-18T16:27:05.145088+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16751
+	Timestamp: 3149030011
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 69
+
+2021-02-18T16:27:05.150639+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7709
+	Timestamp: 3795181745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 697
+
+2021-02-18T16:27:05.155459+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7710
+	Timestamp: 3795181745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 697
+
+2021-02-18T16:27:05.166749+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16752
+	Timestamp: 3149030971
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 72
+
+2021-02-18T16:27:05.187171+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16753
+	Timestamp: 3149031931
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 67
+
+2021-02-18T16:27:05.187349+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7711
+	Timestamp: 3795184985
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 613
+
+2021-02-18T16:27:05.191937+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7712
+	Timestamp: 3795184985
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 613
+
+2021-02-18T16:27:05.207166+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16754
+	Timestamp: 3149032891
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 73
+
+2021-02-18T16:27:05.217646+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7713
+	Timestamp: 3795187865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1049
+
+2021-02-18T16:27:05.227622+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16755
+	Timestamp: 3149033851
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 70
+
+2021-02-18T16:27:05.248101+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7714
+	Timestamp: 3795190745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 733
+
+2021-02-18T16:27:05.248195+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16756
+	Timestamp: 3149034811
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 72
+
+2021-02-18T16:27:05.253148+07:00 [ pion:ice:trace] checking keepalive
+2021-02-18T16:27:05.253487+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7715
+	Timestamp: 3795190745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 734
+
+2021-02-18T16:27:05.269182+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16757
+	Timestamp: 3149035771
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 80
+
+2021-02-18T16:27:05.284495+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7716
+	Timestamp: 3795193985
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1004
+
+2021-02-18T16:27:05.289721+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16758
+	Timestamp: 3149036731
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 80
+
+2021-02-18T16:27:05.310351+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16759
+	Timestamp: 3149037691
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 77
+
+2021-02-18T16:27:05.320285+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7717
+	Timestamp: 3795196865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 613
+
+2021-02-18T16:27:05.325411+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7718
+	Timestamp: 3795196865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 614
+
+2021-02-18T16:27:05.330927+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16760
+	Timestamp: 3149038651
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 76
+
+2021-02-18T16:27:05.351214+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7719
+	Timestamp: 3795199745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1127
+
+2021-02-18T16:27:05.351327+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16761
+	Timestamp: 3149039611
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 76
+
+2021-02-18T16:27:05.366584+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16762
+	Timestamp: 3149040571
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 69
+
+2021-02-18T16:27:05.387222+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7720
+	Timestamp: 3795202985
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 655
+
+2021-02-18T16:27:05.387346+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16763
+	Timestamp: 3149041531
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 72
+
+2021-02-18T16:27:05.392232+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7721
+	Timestamp: 3795202985
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 655
+
+2021-02-18T16:27:05.407621+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16764
+	Timestamp: 3149042491
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 68
+
+2021-02-18T16:27:05.417868+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7722
+	Timestamp: 3795205865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 709
+
+2021-02-18T16:27:05.423026+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7723
+	Timestamp: 3795205865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 709
+
+2021-02-18T16:27:05.428269+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16765
+	Timestamp: 3149043451
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 71
+
+2021-02-18T16:27:05.448619+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16766
+	Timestamp: 3149044411
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 70
+
+2021-02-18T16:27:05.448706+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7724
+	Timestamp: 3795208745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 624
+
+2021-02-18T16:27:05.453839+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7725
+	Timestamp: 3795208745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 624
+
+2021-02-18T16:27:05.464093+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16767
+	Timestamp: 3149045371
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 71
+
+2021-02-18T16:27:05.484572+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16768
+	Timestamp: 3149046331
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 67
+
+2021-02-18T16:27:05.484685+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7726
+	Timestamp: 3795211985
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1154
+
+2021-02-18T16:27:05.511057+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16769
+	Timestamp: 3149047291
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 67
+
+2021-02-18T16:27:05.520466+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7727
+	Timestamp: 3795214865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 749
+
+2021-02-18T16:27:05.525796+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7728
+	Timestamp: 3795214865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 749
+
+2021-02-18T16:27:05.525904+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16770
+	Timestamp: 3149048251
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 65
+
+2021-02-18T16:27:05.546464+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16771
+	Timestamp: 3149049211
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 69
+
+2021-02-18T16:27:05.551563+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7729
+	Timestamp: 3795217745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 606
+
+2021-02-18T16:27:05.556867+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7730
+	Timestamp: 3795217745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 607
+
+2021-02-18T16:27:05.567043+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16772
+	Timestamp: 3149050171
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 63
+
+2021-02-18T16:27:05.583061+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7731
+	Timestamp: 3795220985
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 704
+
+2021-02-18T16:27:05.587628+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16773
+	Timestamp: 3149051131
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 65
+
+2021-02-18T16:27:05.588022+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7732
+	Timestamp: 3795220985
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 705
+
+2021-02-18T16:27:05.608592+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16774
+	Timestamp: 3149052091
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 69
+
+2021-02-18T16:27:05.618728+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7733
+	Timestamp: 3795223865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 655
+
+2021-02-18T16:27:05.624513+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16775
+	Timestamp: 3149053051
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 70
+
+2021-02-18T16:27:05.624649+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7734
+	Timestamp: 3795223865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 656
+
+2021-02-18T16:27:05.644876+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16776
+	Timestamp: 3149054011
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 66
+
+2021-02-18T16:27:05.655073+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7735
+	Timestamp: 3795226745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 699
+
+2021-02-18T16:27:05.660505+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7736
+	Timestamp: 3795226745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 699
+
+2021-02-18T16:27:05.671261+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16777
+	Timestamp: 3149054971
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 63
+
+2021-02-18T16:27:05.686105+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7737
+	Timestamp: 3795229985
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 596
+
+2021-02-18T16:27:05.686189+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16778
+	Timestamp: 3149055931
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 61
+
+2021-02-18T16:27:05.691609+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7738
+	Timestamp: 3795229985
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 597
+
+2021-02-18T16:27:05.706763+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16779
+	Timestamp: 3149056891
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 69
+
+2021-02-18T16:27:05.716998+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7739
+	Timestamp: 3795232865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1134
+
+2021-02-18T16:27:05.727201+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16780
+	Timestamp: 3149057851
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 73
+
+2021-02-18T16:27:05.747731+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7740
+	Timestamp: 3795235745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 666
+
+2021-02-18T16:27:05.747797+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16781
+	Timestamp: 3149058811
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 75
+
+2021-02-18T16:27:05.753271+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7741
+	Timestamp: 3795235745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 667
+
+2021-02-18T16:27:05.768318+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16782
+	Timestamp: 3149059771
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 65
+
+2021-02-18T16:27:05.783737+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7742
+	Timestamp: 3795238985
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1130
+
+2021-02-18T16:27:05.788841+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16783
+	Timestamp: 3149060731
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 67
+
+2021-02-18T16:27:05.809568+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16784
+	Timestamp: 3149061691
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 68
+
+2021-02-18T16:27:05.815311+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7743
+	Timestamp: 3795241865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 618
+
+2021-02-18T16:27:05.819786+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7744
+	Timestamp: 3795241865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 619
+
+2021-02-18T16:27:05.830039+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16785
+	Timestamp: 3149062651
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 90
+
+2021-02-18T16:27:05.845528+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16786
+	Timestamp: 3149063611
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 78
+
+2021-02-18T16:27:05.850768+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7745
+	Timestamp: 3795244745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 646
+
+2021-02-18T16:27:05.855806+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7746
+	Timestamp: 3795244745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 646
+
+2021-02-18T16:27:05.866218+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16787
+	Timestamp: 3149064571
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 75
+
+2021-02-18T16:27:05.886937+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16788
+	Timestamp: 3149065531
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 70
+
+2021-02-18T16:27:05.887061+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7747
+	Timestamp: 3795247985
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 698
+
+2021-02-18T16:27:05.892105+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7748
+	Timestamp: 3795247985
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 699
+
+2021-02-18T16:27:05.907850+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16789
+	Timestamp: 3149066491
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 73
+
+2021-02-18T16:27:05.917893+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7749
+	Timestamp: 3795250865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1056
+
+2021-02-18T16:27:05.923222+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16790
+	Timestamp: 3149067451
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 70
+
+2021-02-18T16:27:05.943530+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16791
+	Timestamp: 3149068411
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 71
+
+2021-02-18T16:27:05.948967+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7750
+	Timestamp: 3795253745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 719
+
+2021-02-18T16:27:05.954082+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7751
+	Timestamp: 3795253745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 719
+
+2021-02-18T16:27:05.969272+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16792
+	Timestamp: 3149069371
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 68
+
+2021-02-18T16:27:05.984686+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7752
+	Timestamp: 3795256985
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1138
+
+2021-02-18T16:27:05.989829+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16793
+	Timestamp: 3149070331
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 86
+
+2021-02-18T16:27:06.010429+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16794
+	Timestamp: 3149071291
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 77
+
+2021-02-18T16:27:06.015437+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7753
+	Timestamp: 3795259865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1102
+
+2021-02-18T16:27:06.025849+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16795
+	Timestamp: 3149072251
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 68
+
+2021-02-18T16:27:06.046169+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16796
+	Timestamp: 3149073211
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 69
+
+2021-02-18T16:27:06.051369+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7754
+	Timestamp: 3795262745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 634
+
+2021-02-18T16:27:06.056766+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7755
+	Timestamp: 3795262745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 634
+
+2021-02-18T16:27:06.066798+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16797
+	Timestamp: 3149074171
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 66
+
+2021-02-18T16:27:06.087315+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7756
+	Timestamp: 3795265985
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 652
+
+2021-02-18T16:27:06.087421+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16798
+	Timestamp: 3149075131
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 67
+
+2021-02-18T16:27:06.092452+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7757
+	Timestamp: 3795265985
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 653
+
+2021-02-18T16:27:06.107860+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16799
+	Timestamp: 3149076091
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 68
+
+2021-02-18T16:27:06.118008+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7758
+	Timestamp: 3795268865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 631
+
+2021-02-18T16:27:06.123146+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7759
+	Timestamp: 3795268865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 631
+
+2021-02-18T16:27:06.128227+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16800
+	Timestamp: 3149077051
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 69
+
+2021-02-18T16:27:06.148634+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16801
+	Timestamp: 3149078011
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 66
+
+2021-02-18T16:27:06.148727+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7760
+	Timestamp: 3795271745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 719
+
+2021-02-18T16:27:06.153894+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7761
+	Timestamp: 3795271745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 720
+
+2021-02-18T16:27:06.169274+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16802
+	Timestamp: 3149078971
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 65
+
+2021-02-18T16:27:06.184566+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7762
+	Timestamp: 3795274985
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 643
+
+2021-02-18T16:27:06.189826+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16803
+	Timestamp: 3149079931
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 62
+
+2021-02-18T16:27:06.189912+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7763
+	Timestamp: 3795274985
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 644
+
+2021-02-18T16:27:06.205367+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16804
+	Timestamp: 3149080891
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 68
+
+2021-02-18T16:27:06.215398+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7764
+	Timestamp: 3795277865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 680
+
+2021-02-18T16:27:06.220611+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7765
+	Timestamp: 3795277865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 681
+
+2021-02-18T16:27:06.225750+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16805
+	Timestamp: 3149081851
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 63
+
+2021-02-18T16:27:06.246305+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16806
+	Timestamp: 3149082811
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 62
+
+2021-02-18T16:27:06.251570+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7766
+	Timestamp: 3795280745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 663
+
+2021-02-18T16:27:06.256823+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7767
+	Timestamp: 3795280745
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 664
+
+2021-02-18T16:27:06.266873+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16807
+	Timestamp: 3149083771
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 68
+
+2021-02-18T16:27:06.282649+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 96
+	Sequence Number: 7768
+	Timestamp: 3795283985
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 617
+
+2021-02-18T16:27:06.287529+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7769
+	Timestamp: 3795283985
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 618
+
+2021-02-18T16:27:06.287673+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16808
+	Timestamp: 3149084731
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 73
+
+2021-02-18T16:27:06.307859+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16809
+	Timestamp: 3149085691
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 65
+
+2021-02-18T16:27:06.318253+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7770
+	Timestamp: 3795286865
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1034
+
+2021-02-18T16:27:06.328395+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16810
+	Timestamp: 3149086651
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 82
+
+2021-02-18T16:27:06.344066+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: false
+	Payload Type: 111
+	Sequence Number: 16811
+	Timestamp: 3149087611
+	SSRC: 295927579 (11a37f1b)
+	Payload Length: 65
+
+2021-02-18T16:27:06.354262+07:00 [            rtp] [Inrz9icu9QFD78qchN77i3] ReadRTP: RTP PACKET:
+	Version: 2
+	Marker: true
+	Payload Type: 96
+	Sequence Number: 7771
+	Timestamp: 3795290105
+	SSRC: 308240014 (125f5e8e)
+	Payload Length: 1054
+
+2021-02-18T16:27:06.360146+07:00 [            sfu] [Inrz9icu9QFD78qchN77i3] hangUp event
+2021-02-18T16:27:06.360261+07:00 [pion:sctp:debug] [0xc0004fc000] closing association..
+2021-02-18T16:27:06.360285+07:00 [pion:sctp:debug] [0xc0004fc000] state change: 'Established' => 'Closed'
+2021-02-18T16:27:06.360322+07:00 [webrtctransport] [Inrz9icu9QFD78qchN77i3] Remote track has ended: 308240014: EOF
+/home/thaidh/Documents/peer-calls/server/webrtctransport.go:535: read rtp
+2021-02-18T16:27:06.360257+07:00 [      roompeers] removePeer: Inrz9icu9QFD78qchN77i3
+2021-02-18T16:27:06.360424+07:00 [      roompeers] [Inrz9icu9QFD78qchN77i3] removeTrack ssrc: 308240014 from other peers
+2021-02-18T16:27:06.360449+07:00 [pion:sctp:debug] [0xc0004fc000] readLoop exited EOF
+2021-02-18T16:27:06.360465+07:00 [webrtctransport] [Inrz9icu9QFD78qchN77i3] Remote track has ended: 295927579: EOF
+/home/thaidh/Documents/peer-calls/server/webrtctransport.go:535: read rtp
+2021-02-18T16:27:06.360489+07:00 [pion:sctp:debug] [0xc0004fc000] association closed
+2021-02-18T16:27:06.360494+07:00 [datatransceiver] [Inrz9icu9QFD78qchN77i3] DataTransceiver.Close
+2021-02-18T16:27:06.360506+07:00 [pion:sctp:debug] [0xc0004fc000] stats nDATAs (in) : 1
+2021-02-18T16:27:06.360530+07:00 [      roompeers] [Inrz9icu9QFD78qchN77i3] removeTrack ssrc: 295927579 from other peers
+2021-02-18T16:27:06.360558+07:00 [pion:sctp:debug] [0xc0004fc000] stats nSACKs (in) : 1
+2021-02-18T16:27:06.360575+07:00 [pion:sctp:debug] [0xc0004fc000] stats nT3Timeouts : 0
+2021-02-18T16:27:06.360588+07:00 [pion:sctp:debug] [0xc0004fc000] stats nAckTimeouts: 1
+2021-02-18T16:27:06.360602+07:00 [pion:sctp:debug] [0xc0004fc000] stats nFastRetrans: 0
+2021-02-18T16:27:06.360654+07:00 [pion:sctp:debug] [0xc0004fc000] writeLoop exited
+2021-02-18T16:27:06.360678+07:00 [   pion:pc:warn] Failed to accept RTP SessionSRTP has been closed
+2021-02-18T16:27:06.360711+07:00 [   pion:pc:warn] Failed to accept RTCP SessionSRTCP has been closed
+2021-02-18T16:27:06.360889+07:00 [  pion:ice:info] Setting new connection state: Closed
+2021-02-18T16:27:06.360943+07:00 [   pion:pc:info] peer connection state changed: closed
+2021-02-18T16:27:06.360980+07:00 [            sfu] [Inrz9icu9QFD78qchN77i3] Peer connection closed, emitting hangUp event
+2021-02-18T16:27:06.361170+07:00 [   pion:pc:info] ICE connection state changed: closed
+2021-02-18T16:27:06.361220+07:00 [      signaller] [Inrz9icu9QFD78qchN77i3] Peer connection state changed: closed
+2021-02-18T16:27:06.374978+07:00 [            sfu] [Inrz9icu9QFD78qchN77i3] Error handling websocket message: [Inrz9icu9QFD78qchN77i3] Ignoring signal 'map[signal:map[renegotiate:true] userId:__SERVER__]' because webRTCTransport is not initialized

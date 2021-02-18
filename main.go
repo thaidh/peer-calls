@@ -4,10 +4,12 @@ import (
 	pkgErrors "errors"
 	"flag"
 	"fmt"
+	"io"
 	"net"
 	"net/http"
 	"os"
 	"strconv"
+	"time"
 
 	"github.com/juju/errors"
 	"github.com/peer-calls/peer-calls/server"
@@ -15,6 +17,9 @@ import (
 )
 
 const gitDescribe string = "v0.0.0"
+
+//format name of filelog
+const LoggerFileNameFormat string = "2006-01-02T15:04:05"
 
 func configure(loggerFactory server.LoggerFactory, args []string) (net.Listener, *server.StartStopper, error) {
 	log := loggerFactory.GetLogger("main")
@@ -55,16 +60,23 @@ func configure(loggerFactory server.LoggerFactory, args []string) (net.Listener,
 }
 
 func start(args []string) (addr *net.TCPAddr, stop func() error, errChan <-chan error) {
-	loggerFactory := logger.NewFactoryFromEnv("PEERCALLS_", os.Stderr)
+	date := time.Now().Format(LoggerFileNameFormat)
+	logFile, err := os.OpenFile("./logs/"+date, os.O_CREATE|os.O_APPEND|os.O_RDWR, 0666)
+	if err != nil {
+		panic(err)
+
+	}
+	mw := io.MultiWriter(os.Stderr, logFile)
+	loggerFactory := logger.NewFactoryFromEnv("PEERCALLS_", mw)
 	loggerFactory.SetDefaultEnabled([]string{
-		"-sdp",
-		"-ws",
-		"-nack",
-		"-rtp",
-		"-rtcp",
-		"-pion:*:trace",
-		"-pion:*:debug",
-		"-pion:*:info",
+		// "-sdp",
+		// "-ws",
+		// "-nack",
+		// "-rtp",
+		// "-rtcp",
+		// "-pion:*:trace",
+		// "-pion:*:debug",
+		// "-pion:*:info",
 		"*",
 	})
 
