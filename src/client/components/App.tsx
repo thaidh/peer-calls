@@ -101,7 +101,7 @@ export default class App extends React.PureComponent<AppProps, AppState> {
           onGetDesktopStream={this.props.getDesktopStream}
           onRemoveLocalStream={this.props.removeLocalStream}
         />
-        <Notifications
+        {/* <Notifications
           className={chatVisibleClassName}
           dismiss={dismissNotification}
           notifications={notifications}
@@ -113,7 +113,7 @@ export default class App extends React.PureComponent<AppProps, AppState> {
           sendText={sendText}
           sendFile={sendFile}
           visible={this.state.chatVisible}
-        />
+        /> */}
         <Media />
         {this.props.dialState !== constants.DIAL_STATE_HUNG_UP &&
           <Videos

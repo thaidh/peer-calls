@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "npm run css && npm run js && npm run start:server",
-    "start:server": "go run main.go",
+    "start:server": "go run main.go -c ./config/config.yml",
     "start:sfu": "PEERCALLS_NETWORK_TYPE=sfu go run main.go",
     "start:watch": "chastifol [ npm run js:watch ] [ npm run css:watch ] [ npm run start:server ]",
     "prepublishOnly": "npm run build",
@@ -22,7 +22,8 @@
     "test:go": "go test ./...",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
-    "js": "webpack --config webpack.prod.js --optimize-minimize",
+    "js1": "webpack --config webpack.prod.js --optimize-minimize",
+    "js": "webpack --config webpack.dev.js",
     "js:watch": "webpack --config webpack.dev.js --watch",
     "css": "node-sass ./src/sass/style.sass -o ./build/",
     "css:watch": "npm run css && node-sass --watch ./src/sass/style.sass -o ./build/",

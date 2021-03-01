@@ -172,7 +172,7 @@ export default class Toolbar extends React.PureComponent<
 
     return (
       <React.Fragment>
-        <div className={'toolbar-other ' + className}>
+        {/* <div className={'toolbar-other ' + className}>
           <ToolbarButton
             className='copy-url'
             key='copy-url'
@@ -236,11 +236,11 @@ export default class Toolbar extends React.PureComponent<
             </div>
           </div>
 
-        </div>
+        </div>  */}
 
         {isInCall && (
           <div className={'toolbar-call ' + className}>
-            <ShareDesktopDropdown
+            {/* <ShareDesktopDropdown
               className='stream-desktop'
               icon={MdScreenShare}
               offIcon={MdStopScreenShare}
@@ -251,7 +251,7 @@ export default class Toolbar extends React.PureComponent<
               onRemoveLocalStream={this.props.onRemoveLocalStream}
             />
 
-            <VideoDropdown />
+            {/* <VideoDropdown /> */}
 
             <ToolbarButton
               onClick={this.props.onHangup}
@@ -261,9 +261,9 @@ export default class Toolbar extends React.PureComponent<
               title='Hang Up'
             />
 
-            <AudioDropdown />
+            {/* <AudioDropdown /> */}
 
-            <ToolbarButton
+            {/* <ToolbarButton
               onClick={this.handleFullscreenClick}
               className='fullscreen'
               key='fullscreen'
@@ -271,7 +271,7 @@ export default class Toolbar extends React.PureComponent<
               offIcon={MdFullscreen}
               on={this.state.fullScreenEnabled}
               title='Toggle Fullscreen'
-            />
+            /> */}
 
           </div>
         )}
