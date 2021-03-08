@@ -69,14 +69,14 @@ func start(args []string) (addr *net.TCPAddr, stop func() error, errChan <-chan 
 	mw := io.MultiWriter(os.Stderr, logFile)
 	loggerFactory := logger.NewFactoryFromEnv("PEERCALLS_", mw)
 	loggerFactory.SetDefaultEnabled([]string{
-		// "-sdp",
-		// "-ws",
-		// "-nack",
-		// "-rtp",
-		// "-rtcp",
-		// "-pion:*:trace",
-		// "-pion:*:debug",
-		// "-pion:*:info",
+		"-sdp",
+		"-ws",
+		"-nack",
+		"-rtp",
+		"-rtcp",
+		"-pion:*:trace",
+		"-pion:*:debug",
+		"-pion:*:info",
 		"*",
 	})
 

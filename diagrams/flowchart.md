@@ -5,14 +5,14 @@ sequenceDiagram
     participant S as Call Service
     participant B as Client 2
 
-    alt http
+    alt HTTP
         A ->>+ S: Create room 
         S -->>- A: Room id 
-        A ->> S: Join room 
-        B ->> S : Join room   
+        A ->> S: Join room with new id
+        B ->> S : Join room with id (share from A)
     end
 
-    alt websocket
+    alt SOCKET
         S -> A: Socket init
         A ->> S: Dial
         Note over A, S: Signaling, make peer connection
@@ -21,7 +21,7 @@ sequenceDiagram
         Note over B, S: Signaling, make peer connection
     end
 
-    loop webrtc
+    loop RTP (webrtc)
         A ->>+ S : media stream from A
         S ->> S: Archive (opt)
         S -->>- B : media stream from A

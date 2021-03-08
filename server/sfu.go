@@ -1,6 +1,7 @@
 package server
 
 import (
+	"encoding/json"
 	"net/http"
 	"sync"
 	"time"
@@ -106,6 +107,10 @@ func (sh *SocketHandler) HandleMessage(message Message) error {
 	sh.mu.Lock()
 	defer sh.mu.Unlock()
 
+	// if message.Type != "ping" {
+	// 	sh.log.Printf("[%s] Handle message from client: %s", sh.clientID, prettyPrint(message))
+	// }
+
 	switch message.Type {
 	case "hangUp":
 		return sh.handleHangUp(message)
@@ -118,6 +123,11 @@ func (sh *SocketHandler) HandleMessage(message Message) error {
 	}
 
 	return errors.Errorf("Unhandled event: %s", message.Type)
+}
+
+func prettyPrint(i interface{}) string {
+	s, _ := json.Marshal(i)
+	return string(s)
 }
 
 func (sh *SocketHandler) Cleanup() {

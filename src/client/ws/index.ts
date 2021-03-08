@@ -69,6 +69,7 @@ export class SocketClient<E extends Events> extends SimpleEmitter<E> {
   }
 
   protected wsHandleMessage = (e: MessageEvent) => {
+    debug('thaidh handle message: ' + e.data)
     const message: Message = JSON.parse(e.data)
     this.emitter.emit(message.type, message.payload)
   }
@@ -78,6 +79,7 @@ export class SocketClient<E extends Events> extends SimpleEmitter<E> {
       type: name as string,
       payload: value,
     }
+    debug('thaidh emit message: ' + JSON.stringify(message))
     this.ws.send(JSON.stringify(message))
   }
 }
